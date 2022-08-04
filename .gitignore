@@ -11,5 +11,7 @@ npm-debug.*
 web-build/
 .idea/
 
+yarn-error.log
+
 # macOS
 .DS_Store
