@@ -23,6 +23,15 @@
         "react-native"
     ],
     "rules": {
-        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
+        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+        "global-require": "off",
+        "prefer-destructuring": "off",
+        "react-hooks/exhaustive-deps": "off",
+        "no-mixed-operators": "off",
+        "react/jsx-one-expression-per-line": "off",
+        "react/require-default-props": "off",
+        "react/forbid-prop-types": "off",
+        "react/prop-types": "off",
+        "import/no-extraneous-dependencies": "off"
     }
 }

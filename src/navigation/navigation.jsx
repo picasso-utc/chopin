@@ -1,24 +1,23 @@
-import React from 'react'
+import { React } from 'react';
 
-import Ionic from 'react-native-vector-icons/Ionicons';
+import { Ionic } from 'react-native-vector-icons/Ionicons';
 
-import {NavigationContainer} from "@react-navigation/native";
-import {createBottomTabNavigator} from "@react-navigation/bottom-tabs";
+import { NavigationContainer } from '@react-navigation/native';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
-import HomeScreen from "../screens/homeScreen";
-import CalendarScreen from "../screens/calendarScreen";
-import ViedupicScreen from "../screens/viedupicScreen";
-import CarteScreen from "../screens/carteScreen";
-import ProfileScreen from "../screens/profileScreen";
+import HomeScreen from '../screens/homeScreen';
+import CalendarScreen from '../screens/calendarScreen';
+import ViedupicScreen from '../screens/viedupicScreen';
+import CarteScreen from '../screens/carteScreen';
+import ProfileScreen from '../screens/profileScreen';
 
-const Navigation = () => {
+function Navigation() {
     const Tab = createBottomTabNavigator();
 
     return (
         <NavigationContainer>
             <Tab.Navigator
                 screenOptions={({route}) => ({
-                    // eslint-disable-next-line react/prop-types,react/no-unstable-nested-components
                     "tabBarIcon": ({focused, color}) => {
                         let iconName;
                         if (route.name === "ACCUEIL") {

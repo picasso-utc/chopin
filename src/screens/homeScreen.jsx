@@ -1,7 +1,7 @@
-import React from 'react'
-import {View} from "react-native";
+import React from 'react';
+import { View } from 'react-native';
 
-const HomeScreen = () => {
+function HomeScreen() {
     return (
         <View
             style = {{
