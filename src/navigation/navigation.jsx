@@ -1,6 +1,6 @@
 import { React } from 'react';
 
-import { Ionic } from 'react-native-vector-icons/Ionicons';
+import Ionic from 'react-native-vector-icons/Ionicons';
 
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
