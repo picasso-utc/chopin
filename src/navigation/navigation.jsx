@@ -52,6 +52,7 @@ function Navigation() {
                         {
                             backgroundColor: '#000223',
                             shadowColor: 'transparent',
+                            height: 109,
                         },
                         null,
                     ],
