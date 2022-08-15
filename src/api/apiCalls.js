@@ -1,14 +1,17 @@
+import MockAdapter from 'axios-mock-adapter';
+
 const axios = require('axios');
 const config = require('./config');
 
-const mock = new config.MockAdapter(axios);
+const mock = new MockAdapter(axios);
 
 mock.onGet(`${config.API_BASE_URL}/newsletter`).reply(200, {
-    data: config.mockNeswletter
+    data: config.mockNeswletter,
 });
 
-export const getNewsletter = () => axios.get(`${config.API_BASE_URL}/newsletter`)
+mock.onGet(`${config.API_BASE_URL}/carte`).reply(200, {
+    data: config.mockCarte,
+});
 
-export default {
-    getNewsletter
-}
+export const getNewsletter = () => axios.get(`${config.API_BASE_URL}/newsletter`);
+export const getCarte = () => axios.get(`${config.API_BASE_URL}/carte`);
