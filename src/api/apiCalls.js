@@ -13,5 +13,10 @@ mock.onGet(`${config.API_BASE_URL}/carte`).reply(200, {
     data: config.mockCarte,
 });
 
+mock.onGet(`${config.API_BASE_URL}/calendar`).reply(200, {
+    data: config.mockEvenements,
+});
+
 export const getNewsletter = () => axios.get(`${config.API_BASE_URL}/newsletter`);
 export const getCarte = () => axios.get(`${config.API_BASE_URL}/carte`);
+export const getEvenements = () => axios.get(`${config.API_BASE_URL}/calendar`);
