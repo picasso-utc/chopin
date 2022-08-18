@@ -29,8 +29,26 @@ const ProductCategory = ({ id, name, picture }) => {
                 alignItems: 'center',
             }}
         >
-            <ProductCategoryPicture picture={picture} />
-            <ProductCategoryName name={name} />
+            <ProductCategoryPicture
+                style={{
+                    position: 'absolute',
+                    top: 15,
+                    width: 110,
+                    height: 110,
+                }}
+                picture={picture}
+            />
+            <ProductCategoryName
+                style={{
+                    color: '#fff',
+                    position: 'absolute',
+                    bottom: 10,
+                    fontSize: 20,
+                    marginTop: 5,
+                    textTransform: 'capitalize',
+                }}
+                name={name}
+            />
         </View>
     );
 };
