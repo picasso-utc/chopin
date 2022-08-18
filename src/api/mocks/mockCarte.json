@@ -2,41 +2,219 @@
   {
     "id": "1",
     "name" : "Bouteilles",
-    "picture" : "bottleBeer"
+    "picture" : "bottleBeer",
+    "products" : [
+      {
+        "id" : "1",
+        "name" : "Bouteille de bière",
+        "price" : "1.00",
+        "description" : "Une bouteille de bière mais sans bière, juste la bouteille."
+      },
+      {
+        "id" : "2",
+        "name" : "Gulden Draak",
+        "price" : "1.80",
+        "description" : "Y'a pas de gulden au Pic"
+      },
+      {
+        "id" : "3",
+        "name" : "Triple K",
+        "price" : "0.10",
+        "description" : "A ce prix là c'est de la simple K."
+      },
+      {
+        "id" : "4",
+        "name" : "Bouteille de bière",
+        "price" : "1.00",
+        "description" : "Une bouteille de bière mais sans bière, juste la bouteille."
+      },
+      {
+        "id" : "5",
+        "name" : "Gulden Draak",
+        "price" : "1.80",
+        "description" : "Y'a pas de gulden au Pic"
+      },
+      {
+        "id" : "6",
+        "name" : "Triple K",
+        "price" : "0.10",
+        "description" : "A ce prix là c'est de la simple K."
+      }
+    ]
   },
   {
     "id": "2",
     "name" : "Pressions",
-    "picture" : "tapBeer"
+    "picture" : "tapBeer",
+    "products" : [
+      {
+        "id" : "1",
+        "name" : "Fut de bière",
+        "price" : "100.00",
+        "description" : "Un fût entier, à vous de trouver comment le vider."
+      },
+      {
+        "id" : "2",
+        "name" : "Gulden Draak",
+        "price" : "1.80",
+        "description" : "Y'a pas de gulden au Pic"
+      },
+      {
+        "id" : "3",
+        "name" : "Triple K",
+        "price" : "0.10",
+        "description" : "A ce prix là c'est de la simple K."
+      }
+    ]
   },
   {
     "id": "3",
     "name" : "Pampryls",
-    "picture" : "pampryls"
+    "picture" : "pampryls",
+    "products" : [
+      {
+        "id" : "1",
+        "name" : "Pampryl",
+        "price" : "0.10",
+        "description" : "Un pampryl, c'est un pampryl."
+      },
+      {
+        "id" : "2",
+        "name" : "Que ça placeholder",
+        "price" : "1.80",
+        "description" : "Frère j'en sais rien c'est bon"
+      },
+      {
+        "id" : "3",
+        "name" : "Triple K",
+        "price" : "0.10",
+        "description" : "Blablablablablablablablabla !!!"
+      }
+    ]
   },
   {
     "id": "4",
     "name" : "Petit Dej",
-    "picture" : "petitDej"
+    "picture" : "petitDej",
+    "products" : [
+      {
+        "id" : "1",
+        "name" : "Pampryl",
+        "price" : "0.10",
+        "description" : "Un pampryl, c'est un pampryl."
+      },
+      {
+        "id" : "2",
+        "name" : "Vive la team info",
+        "price" : "1.80",
+        "description" : "Frère j'en sais rien c'est bon"
+      },
+      {
+        "id" : "3",
+        "name" : "Triple K",
+        "price" : "0.10",
+        "description" : "Blablablablablablablablabla !!!"
+      }
+    ]
   },
   {
     "id": "5",
     "name" : "Repas",
-    "picture" : "repas"
+    "picture" : "repas",
+    "products" : [
+      {
+        "id" : "1",
+        "name" : "Pampryl",
+        "price" : "0.10",
+        "description" : "Un pampryl, c'est un pampryl."
+      },
+      {
+        "id" : "2",
+        "name" : "Que ça placeholder",
+        "price" : "1.80",
+        "description" : "Frère j'en sais rien c'est bon"
+      },
+      {
+        "id" : "3",
+        "name" : "Triple K",
+        "price" : "0.10",
+        "description" : "Blablablablablablablablabla !!!"
+      }
+    ]
   },
   {
     "id": "6",
     "name" : "Softs",
-    "picture" : "softs"
+    "picture" : "softs",
+    "products" : [
+      {
+        "id" : "1",
+        "name" : "Pampryl",
+        "price" : "0.10",
+        "description" : "Un pampryl, c'est un pampryl."
+      },
+      {
+        "id" : "2",
+        "name" : "Que ça placeholder",
+        "price" : "1.80",
+        "description" : "Frère j'en sais rien c'est bon"
+      },
+      {
+        "id" : "3",
+        "name" : "Triple K",
+        "price" : "0.10",
+        "description" : "Blablablablablablablablabla !!!"
+      }
+    ]
   },
   {
     "id": "7",
     "name" : "Fruits",
-    "picture" : "fruits"
+    "picture" : "fruits",
+    "products" : [
+      {
+        "id" : "1",
+        "name" : "Pampryl",
+        "price" : "0.10",
+        "description" : "Un pampryl, c'est un pampryl."
+      },
+      {
+        "id" : "2",
+        "name" : "Que ça placeholder",
+        "price" : "1.80",
+        "description" : "Frère j'en sais rien c'est bon"
+      },
+      {
+        "id" : "3",
+        "name" : "Triple K",
+        "price" : "0.10",
+        "description" : "Blablablablablablablablabla !!!"
+      }
+    ]
   },
   {
     "id": "8",
     "name" : "Vrac",
-    "picture" : "vrac"
+    "picture" : "vrac",
+    "products" : [
+      {
+        "id" : "1",
+        "name" : "Pampryl",
+        "price" : "0.10",
+        "description" : "Un pampryl, c'est un pampryl."
+      },
+      {
+        "id" : "2",
+        "name" : "Que ça placeholder",
+        "price" : "1.80",
+        "description" : "Frère j'en sais rien c'est bon"
+      },
+      {
+        "id" : "3",
+        "name" : "Triple K",
+        "price" : "0.10",
+        "description" : "Blablablablablablablablabla !!!"
+      }
+    ]
   }
 ]
