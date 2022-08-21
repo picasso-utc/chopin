@@ -3,6 +3,7 @@ import { View } from 'react-native';
 
 import DivLinkVideo from '../molecules/divLinkVideo';
 import HowTo from '../molecules/howTo';
+import Events from '../molecules/events';
 
 function ViedupicScreen() {
     return (
@@ -16,6 +17,7 @@ function ViedupicScreen() {
             }}
         >
             <DivLinkVideo />
+            <Events />
             <HowTo />
         </View>
     );
