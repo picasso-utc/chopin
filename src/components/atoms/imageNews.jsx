@@ -4,7 +4,7 @@ import { Image } from 'react-native';
 const ImageNews = ({ lien }) => {
     return (
         <Image
-            source={lien}
+            source={{ uri: lien }}
             style={{
                 width: '100%',
                 height: 175,

@@ -21,9 +21,9 @@ const News = ({ latest, name, linkimg, content }) => {
                 overflow: 'hidden',
             }}
         >
-            <HeaderNews content={name} latest={latest} />
+            <HeaderNews content={name} latest={latest} pressed={Pressed} />
             <ImageNews lien={linkimg} />
-            <TextNews content={content} />
+            <TextNews content={content} pressed={Pressed} />
         </Pressable>
     );
 };
