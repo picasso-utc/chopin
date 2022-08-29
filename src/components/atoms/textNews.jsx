@@ -1,18 +1,7 @@
 import React from 'react';
-import { Text } from 'react-native';
 
-const TextNews = ({ content }) => {
-    return (
-        <Text
-            style={{
-                width: '100%',
-                padding: 15,
-                color: '#FFFFFF',
-                fontSize: 15,
-            }}
-        >
-            {content}
-        </Text>
-    );
-};
+import { Text } from 'react-native';
+import AtomStyle from '../style/atomsStyle';
+
+const TextNews = ({ content }) => <Text style={AtomStyle.textNews}> {content} </Text>;
 export default TextNews;

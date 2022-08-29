@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 import { Pressable, ScrollView, Text, View } from 'react-native';
 import { getCarte, getTrendingProduct } from '../../api/apiCalls';
+import ScreenStyle from '../style/screenStyle';
 
 import ProductCategory from '../molecules/productCategory';
 import { ProductImages } from '../atoms/productCategoryImagesPath';
@@ -35,12 +36,7 @@ function CarteScreen() {
     }, []);
 
     return (
-        <View
-            style={{
-                backgroundColor: '#000223',
-                height: '100%',
-            }}
-        >
+        <View style={ScreenStyle.scrollScreenBackground}>
             {trending && !category && (
                 <TrendingProduct
                     category={trending.category}
@@ -48,15 +44,8 @@ function CarteScreen() {
                     description={trending.desc}
                 />
             )}
-            <ScrollView
-                contentContainerStyle={{
-                    display: 'flex',
-                    flexWrap: 'wrap',
-                    flexDirection: 'row',
-                    justifyContent: 'space-evenly',
-                    alignItems: 'center',
-                }}
-            >
+
+            <ScrollView contentContainerStyle={ScreenStyle.carteContentContainer}>
                 {category === null &&
                     carte.map((categories) => (
                         <Pressable
@@ -78,10 +67,7 @@ function CarteScreen() {
                         style={{
                             display: 'flex',
                         }}
-                        contentContainerStyle={{
-                            justifyContent: 'center',
-                            alignItems: 'center',
-                        }}
+                        contentContainerStyle={ScreenStyle.ScreenScrollContainer}
                     >
                         <ProductCategoryPicture
                             picture={ProductImages[category.name] || ProductImages.default}
@@ -91,21 +77,9 @@ function CarteScreen() {
                             onPress={() => {
                                 setCategory(null);
                             }}
-                            style={{
-                                marginTop: 20,
-                                backgroundColor: 'rgba(255, 255, 255, 0.33)',
-                                padding: 15,
-                                borderRadius: 20,
-                            }}
+                            style={ScreenStyle.carteButtonContainer}
                         >
-                            <Text
-                                style={{
-                                    color: 'white',
-                                    fontSize: 16,
-                                }}
-                            >
-                                Retour au Menu
-                            </Text>
+                            <Text style={ScreenStyle.carteButtonText}>Retour au Menu</Text>
                         </Pressable>
                     </ScrollView>
                 )}

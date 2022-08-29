@@ -2,28 +2,21 @@ import React from 'react';
 import { View, ScrollView } from 'react-native';
 
 import DayCalendar from '../molecules/dayCalendar';
+import ScreenStyle from '../style/screenStyle';
 
 function CalendarScreen() {
     return (
-        <View
-            style={{
-                backgroundColor: '#000223',
-                height: '100%',
-                display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'center',
-            }}
-        >
+        <View style={ScreenStyle.calendarScreenContainer}>
             <DayCalendar
                 id={1}
-                today={true}
+                today
                 weekday="lundi"
                 day="21"
                 morning="FEVITE"
                 noon="FEVITE"
                 night="FEVITE"
             />
-            <ScrollView contentContainerStyle={{ alignItems: 'center' }} scrollEnabled={true}>
+            <ScrollView contentContainerStyle={ScreenStyle.ScreenScrollContainer} scrollEnabled>
                 <DayCalendar
                     id={2}
                     today={false}
