@@ -1,12 +1,12 @@
 export const ProductImages = {
-    tapBeer: require('../../../assets/productImages/tapBeer.png'),
-    fruits: require('../../../assets/productImages/fruits.png'),
-    bottleBeer: require('../../../assets/productImages/bottleBeer.png'),
-    softs: require('../../../assets/productImages/softs.png'),
-    petitDej: require('../../../assets/productImages/petitDej.png'),
-    repas: require('../../../assets/productImages/repas.png'),
-    vrac: require('../../../assets/productImages/vrac.png'),
-    pampryls: require('../../../assets/productImages/pampryls.png'),
+    Pressions: require('../../../assets/productImages/tapBeer.png'),
+    Fruits: require('../../../assets/productImages/fruits.png'),
+    Bouteilles: require('../../../assets/productImages/bottleBeer.png'),
+    Softs: require('../../../assets/productImages/softs.png'),
+    'Petit Dej': require('../../../assets/productImages/petitDej.png'),
+    Repas: require('../../../assets/productImages/repas.png'),
+    Vrac: require('../../../assets/productImages/vrac.png'),
+    Pampryls: require('../../../assets/productImages/pampryls.png'),
     default: require('../../../assets/productImages/bottleBeer.png'),
 };
 
