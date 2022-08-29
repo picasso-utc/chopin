@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-import { Text, Pressable, View, Button } from 'react-native';
+import { Pressable, View, Text } from 'react-native';
 
 import Checkbox from 'expo-checkbox';
 
 import CharteText from '../atoms/charteText';
+import MoleculeStyle from '../style/moleculeStyle';
 
 const Charte = () => {
     const [Pressed, setPressed] = useState(false);
@@ -14,74 +15,29 @@ const Charte = () => {
             onPress={() => {
                 setPressed(true);
             }}
-            style={{
-                alignItems: 'center',
-                justifyContent: 'center',
-                width: 330,
-                marginBottom: 20,
-                overflow: 'hidden',
-                borderRadius: 20,
-            }}
+            style={MoleculeStyle.charteComponent}
         >
-            <Text
-                style={{
-                    color: 'white',
-                    textAlign: 'center',
-                    backgroundColor: '#B22132',
-                    fontSize: 20,
-                    padding: 20,
-                    width: '100%',
-                    height: 65,
-                }}
-            >
-                CHARTE DU PERMANENCIER
-            </Text>
+            <Text style={MoleculeStyle.charteEntete}>CHARTE DU PERMANENCIER</Text>
             {Pressed && (
-                <View
-                    style={{
-                        backgroundColor: 'rgba(255, 255, 255, 0.33)',
-                        padding: 20,
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                    }}
-                >
+                <View style={MoleculeStyle.charteTextContainer}>
                     <CharteText />
-                    <View
-                        style={{
-                            flexDirection: 'row',
-                            margin: 20,
-                            alignItems: 'center',
-                        }}
-                    >
+                    <View style={MoleculeStyle.charteCheckboxContainer}>
                         <Checkbox
-                            color={'white'}
-                            style={{ marginRight: 10, width: 15, height: 15 }}
+                            color="white"
+                            style={MoleculeStyle.charteCheckbox}
                             value={isChecked}
                             onValueChange={setChecked}
                         />
-                        <Text style={{ color: 'white', fontSize: 14 }}>Accepter la charte</Text>
+                        <Text style={MoleculeStyle.charteCheckboxText}>Accepter la charte</Text>
                     </View>
                     <Pressable
                         onPress={() => {
                             setPressed(false);
                             setChecked(false);
                         }}
-                        style={{
-                            backgroundColor: '#B22132',
-                            borderRadius: 20,
-                            width: 100,
-                        }}
+                        style={MoleculeStyle.charteConfrimContainer}
                     >
-                        <Text
-                            style={{
-                                color: 'white',
-                                padding: 10,
-                                textAlign: 'center',
-                                fontSize: 16,
-                            }}
-                        >
-                            Valider
-                        </Text>
+                        <Text style={MoleculeStyle.charteConfirmText}>Valider</Text>
                     </Pressable>
                 </View>
             )}

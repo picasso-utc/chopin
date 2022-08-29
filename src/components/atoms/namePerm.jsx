@@ -1,18 +1,11 @@
 import React from 'react';
-import { Text, View } from 'react-native';
+import { View, Text } from 'react-native';
 
-const NamePerm = ({ name, style }) => {
-    return (
-        <View style={style}>
-            <Text
-                style={{
-                    color: '#FFFFFF',
-                    fontSize: 14,
-                }}
-            >
-                {name}
-            </Text>
-        </View>
-    );
-};
+import AtomStyle from '../style/atomsStyle';
+
+const NamePerm = ({ name, style }) => (
+    <View style={style}>
+        <Text style={AtomStyle.textNamePerm}> {name} </Text>
+    </View>
+);
 export default NamePerm;

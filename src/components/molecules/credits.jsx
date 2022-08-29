@@ -3,13 +3,13 @@ import { View, Text } from 'react-native';
 
 import Constants from 'expo-constants';
 
+import MoleculeStyle from '../style/moleculeStyle';
+
 const Credits = () => (
-    <View style={{ alignItems: 'center', marginTop: 200 }}>
-        <Text style={{ color: 'white', fontSize: 14, marginBottom: 10 }}>
-            Chopin v{Constants.manifest.version}
-        </Text>
-        <Text style={{ color: 'white', fontSize: 14 }}>Développé avec passion par le</Text>
-        <Text style={{ color: '#B22132', fontSize: 14 }}>Pic&apos;Asso A22</Text>
+    <View style={MoleculeStyle.creditsContainer}>
+        <Text style={MoleculeStyle.creditsTextVersion}>Chopin v {Constants.manifest.version}</Text>
+        <Text style={MoleculeStyle.creditsTextDevBy}>Développé avec passion par le</Text>
+        <Text style={MoleculeStyle.creditsTextPic}>Pic&apos;Asso A22</Text>
     </View>
 );
 

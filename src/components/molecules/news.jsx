@@ -4,6 +4,7 @@ import { Pressable } from 'react-native';
 import HeaderNews from '../atoms/headerNews';
 import ImageNews from '../atoms/imageNews';
 import TextNews from '../atoms/textNews';
+import MoleculeStyle from '../style/moleculeStyle';
 
 const News = ({ latest, name, linkimg, content }) => {
     const [Pressed, setPressed] = useState(false);
@@ -12,14 +13,9 @@ const News = ({ latest, name, linkimg, content }) => {
             onPress={() => {
                 setPressed((current) => !current);
             }}
-            style={{
-                backgroundColor: 'rgba(256,256,256,0.33)',
-                height: Pressed === true ? 'auto' : 316,
-                width: '90%',
-                borderRadius: 20,
-                marginTop: 20,
-                overflow: 'hidden',
-            }}
+            style={
+                Pressed === true ? MoleculeStyle.newsContainerPressed : MoleculeStyle.newsContainer
+            }
         >
             <HeaderNews content={name} latest={latest} />
             <ImageNews lien={linkimg} />

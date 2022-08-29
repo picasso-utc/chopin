@@ -5,6 +5,7 @@ import { getEvenements } from '../../api/apiCalls';
 import EventTimelineDate from '../atoms/eventTimelineDate';
 import EventTimelineLine from '../atoms/eventTimelineLine';
 import EventTimelineDot from '../atoms/eventTimelineDot';
+import MoleculeStyle from '../style/moleculeStyle';
 
 const Events = () => {
     const [events, setEvents] = useState([]);
@@ -22,9 +23,7 @@ const Events = () => {
                 res.data.data.sort((a, b) => (a.date > b.date ? 1 : -1));
 
                 // on check quel est le prochain evenement du semestre
-                const nextEvent = res.data.data.find((event) => {
-                    return event.date >= today;
-                });
+                const nextEvent = res.data.data.find((event) => event.date >= today);
 
                 // on set a true le prochain evenement du semestre
                 nextEvent.nextEvent = true;
@@ -37,38 +36,15 @@ const Events = () => {
     }, []);
 
     return (
-        <View
-            style={{
-                marginVertical: 20,
-                width: '80%',
-            }}
-        >
-            <Text
-                style={{
-                    fontSize: 20,
-                    textTransform: 'uppercase',
-                    color: '#fff',
-                    marginBottom: 20,
-                    textAlign: 'center',
-                }}
-            >
-                Evenements du Semestre
-            </Text>
+        <View style={MoleculeStyle.eventHeaderContainer}>
+            <Text style={MoleculeStyle.eventHeaderText}>Evenements du Semestre</Text>
             <View>
                 {events.map((event) => (
-                    <View style={{ flexDirection: 'row', alignItems: 'center' }} key={event.id}>
+                    <View style={MoleculeStyle.eventContainer} key={event.id}>
                         <EventTimelineLine />
                         <EventTimelineDot nextEvent={event.nextEvent} />
                         <EventTimelineDate date={event.date} />
-                        <Text
-                            style={{
-                                color: 'white',
-                                marginVertical: 10,
-                                fontSize: 14,
-                            }}
-                        >
-                            {event.nom}
-                        </Text>
+                        <Text style={MoleculeStyle.eventText}>{event.nom}</Text>
                     </View>
                 ))}
             </View>
