@@ -60,6 +60,7 @@ function Navigation() {
                         {
                             color: 'white',
                             fontSize: 28,
+                            fontFamily: 'RobotoSlab-bold',
                         },
                         null,
                     ],

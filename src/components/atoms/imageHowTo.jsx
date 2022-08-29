@@ -1,16 +1,8 @@
 import React from 'react';
 import { Image } from 'react-native';
 
-const ImageHowTo = ({ src }) => {
-    return (
-        <Image
-            source={src}
-            style={{
-                height: 84,
-                width: 84,
-            }}
-        />
-    );
-};
+import AtomStyle from '../style/atomsStyle';
+
+const ImageHowTo = ({ src }) => <Image source={src} style={AtomStyle.imageHowTo} />;
 
 export default ImageHowTo;

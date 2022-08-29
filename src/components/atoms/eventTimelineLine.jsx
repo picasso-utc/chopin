@@ -1,16 +1,8 @@
 import React from 'react';
 import { View } from 'react-native';
 
-const EventTimelineLine = () => (
-    <View
-        style={{
-            borderLeftColor: 'white',
-            borderLeftWidth: 1,
-            borderStyle: 'solid',
-            height: 40,
-            transform: [{ translateX: 10 }],
-        }}
-    />
-);
+import AtomStyle from '../style/atomsStyle';
+
+const EventTimelineLine = () => <View style={AtomStyle.eventTimelineLine} />;
 
 export default EventTimelineLine;
