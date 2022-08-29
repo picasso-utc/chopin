@@ -2,7 +2,6 @@
   {
     "id": "1",
     "name" : "Bouteilles",
-    "picture" : "bottleBeer",
     "products" : [
       {
         "id" : "1",
@@ -45,7 +44,6 @@
   {
     "id": "2",
     "name" : "Pressions",
-    "picture" : "tapBeer",
     "products" : [
       {
         "id" : "1",
@@ -70,7 +68,6 @@
   {
     "id": "3",
     "name" : "Pampryls",
-    "picture" : "pampryls",
     "products" : [
       {
         "id" : "1",
@@ -95,7 +92,6 @@
   {
     "id": "4",
     "name" : "Petit Dej",
-    "picture" : "petitDej",
     "products" : [
       {
         "id" : "1",
@@ -120,7 +116,6 @@
   {
     "id": "5",
     "name" : "Repas",
-    "picture" : "repas",
     "products" : [
       {
         "id" : "1",
@@ -145,7 +140,6 @@
   {
     "id": "6",
     "name" : "Softs",
-    "picture" : "softs",
     "products" : [
       {
         "id" : "1",
@@ -170,7 +164,6 @@
   {
     "id": "7",
     "name" : "Fruits",
-    "picture" : "fruits",
     "products" : [
       {
         "id" : "1",
@@ -195,7 +188,6 @@
   {
     "id": "8",
     "name" : "Vrac",
-    "picture" : "vrac",
     "products" : [
       {
         "id" : "1",
