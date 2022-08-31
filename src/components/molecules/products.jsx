@@ -5,20 +5,21 @@ import MoleculeStyle from '../style/moleculeStyle';
 
 const Products = ({ products }) => (
     <View style={MoleculeStyle.productListContainer}>
-        {products.map((product) => (
+        {products.map((product, key) => (
             <View
                 key={product.id}
                 style={
-                    product.id % 2 === 0
+                    key % 2 === 0
                         ? MoleculeStyle.productContainerRed
                         : MoleculeStyle.productContainerWhite
                 }
             >
                 <View style={MoleculeStyle.productHeaderContainer}>
                     <Text style={MoleculeStyle.productHeaderText}>{product.name}</Text>
-                    <Text style={MoleculeStyle.productHeaderText}>{`${product.price}€`}</Text>
+                    <Text style={MoleculeStyle.productHeaderPrice}>{`${
+                        product.price / 100
+                    }€`}</Text>
                 </View>
-                <Text style={MoleculeStyle.productDescText}> {product.description} </Text>
             </View>
         ))}
     </View>

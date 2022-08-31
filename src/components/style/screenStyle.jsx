@@ -34,7 +34,7 @@ const ScreenStyle = StyleSheet.create({
         backgroundColor: 'rgba(255, 255, 255, 0.33)',
         padding: 15,
         borderRadius: 20,
-        marginBottom: 10,
+        marginBottom: 20,
     },
     carteButtonText: {
         color: 'white',

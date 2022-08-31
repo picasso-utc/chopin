@@ -6,17 +6,12 @@ import ProductCategoryPicture from '../atoms/productCategoryPicture';
 import MoleculeStyle from '../style/moleculeStyle';
 
 const ProductCategory = ({ id, name, picture }) => {
-    const isDiagonal = () => {
-        if (id === '2' || id === '3' || id === '6' || id === '7') {
-            return true;
-        }
-        return false;
-    };
+    const background = [1, 2, 5, 6, 9, 10, 13, 14].includes(id);
 
     return (
         <View
             style={
-                isDiagonal()
+                background
                     ? MoleculeStyle.productCategoryContainerDiagonal
                     : MoleculeStyle.productCategoryContainer
             }
