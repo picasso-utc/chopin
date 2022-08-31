@@ -155,7 +155,6 @@ const MoleculeStyle = StyleSheet.create({
     // Style for products.jsx
     trendingProductContainer: {
         backgroundColor: '#B22132',
-        margin: 20,
         borderRadius: 20,
         padding: 10,
     },
@@ -175,7 +174,7 @@ const MoleculeStyle = StyleSheet.create({
     trendingProductTextsContainer: {
         display: 'flex',
         flexDirection: 'column',
-        width: '50%',
+        width: '60%',
         justifyContent: 'space-evenly',
     },
     trendingProductName: {
@@ -197,9 +196,10 @@ const MoleculeStyle = StyleSheet.create({
     productContainerRed: {
         marginTop: 20,
         borderStyle: 'solid',
-        borderWidth: 3,
+        borderWidth: 5,
         borderColor: '#B22132',
         paddingHorizontal: 20,
+        paddingVertical: 20,
         borderRadius: 30,
         height: 78,
         justifyContent: 'center',
@@ -207,9 +207,10 @@ const MoleculeStyle = StyleSheet.create({
     productContainerWhite: {
         marginTop: 20,
         borderStyle: 'solid',
-        borderWidth: 3,
+        borderWidth: 5,
         borderColor: 'white',
         paddingHorizontal: 20,
+        paddingVertical: 20,
         borderRadius: 30,
         height: 78,
         justifyContent: 'center',
@@ -222,13 +223,16 @@ const MoleculeStyle = StyleSheet.create({
         color: 'white',
         fontSize: 20,
         fontFamily: 'RobotoSlab-bold',
+        width: '80%',
+        overflow: 'hidden',
     },
-    productDescText: {
+    productHeaderPrice: {
         color: 'white',
-        fontSize: 12,
-        marginTop: 3,
-        width: '75%',
-        fontFamily: 'RobotoSlab',
+        fontSize: 20,
+        fontFamily: 'RobotoSlab-bold',
+        width: '20%',
+        overflow: 'scroll',
+        textAlign: 'right',
     },
 
     // Molecules pour viedupicScreen.jsx
