@@ -18,7 +18,7 @@ function CarteScreen() {
     useEffect(() => {
         getCarte()
             .then((res) => {
-                setCarte(res.data.data);
+                setCarte(res.data);
             })
             .catch((err) => {
                 console.log(err);
@@ -36,7 +36,10 @@ function CarteScreen() {
     }, []);
 
     return (
-        <View style={ScreenStyle.scrollScreenBackground}>
+        <ScrollView
+            style={ScreenStyle.scrollScreenBackground}
+            contentContainerStyle={ScreenStyle.carteContentContainer}
+        >
             {trending && !category && (
                 <TrendingProduct
                     category={trending.category}
@@ -45,46 +48,44 @@ function CarteScreen() {
                 />
             )}
 
-            <ScrollView contentContainerStyle={ScreenStyle.carteContentContainer}>
-                {category === null &&
-                    carte.map((categories) => (
-                        <Pressable
-                            onPress={() => {
-                                setCategory(categories);
-                            }}
-                            key={categories.id}
-                        >
-                            <ProductCategory
-                                id={categories.id}
-                                name={categories.name}
-                                picture={ProductImages[categories.name] || ProductImages.default}
-                            />
-                        </Pressable>
-                    ))}
-
-                {category && (
-                    <ScrollView
-                        style={{
-                            display: 'flex',
+            {category === null &&
+                carte.map((categories, key) => (
+                    <Pressable
+                        onPress={() => {
+                            setCategory(categories);
                         }}
-                        contentContainerStyle={ScreenStyle.ScreenScrollContainer}
+                        key={categories.id}
                     >
-                        <ProductCategoryPicture
-                            picture={ProductImages[category.name] || ProductImages.default}
+                        <ProductCategory
+                            id={key}
+                            name={categories.name}
+                            picture={ProductImages[categories.name] || ProductImages.default}
                         />
-                        <Products products={category.products} />
-                        <Pressable
-                            onPress={() => {
-                                setCategory(null);
-                            }}
-                            style={ScreenStyle.carteButtonContainer}
-                        >
-                            <Text style={ScreenStyle.carteButtonText}>Retour au Menu</Text>
-                        </Pressable>
-                    </ScrollView>
-                )}
-            </ScrollView>
-        </View>
+                    </Pressable>
+                ))}
+
+            {category && (
+                <ScrollView
+                    style={{
+                        display: 'flex',
+                    }}
+                    contentContainerStyle={ScreenStyle.ScreenScrollContainer}
+                >
+                    <ProductCategoryPicture
+                        picture={ProductImages[category.name] || ProductImages.default}
+                    />
+                    <Products products={category.products} />
+                    <Pressable
+                        onPress={() => {
+                            setCategory(null);
+                        }}
+                        style={ScreenStyle.carteButtonContainer}
+                    >
+                        <Text style={ScreenStyle.carteButtonText}>Retour au Menu</Text>
+                    </Pressable>
+                </ScrollView>
+            )}
+        </ScrollView>
     );
 }
 
