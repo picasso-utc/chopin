@@ -17,3 +17,5 @@ yarn-error.log
 
 # macOS
 .DS_Store
+
+src/api/config.js
