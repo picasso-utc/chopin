@@ -4,7 +4,7 @@
     "name": "Softs",
     "products": [
       {
-        "name": "Coca",
+        "name": "Mocked Coca",
         "price": 65,
         "id": 20
       },

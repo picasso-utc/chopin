@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-import { Pressable, ScrollView, Text, View } from 'react-native';
+import { Pressable, ScrollView, Text } from 'react-native';
 import { getCarte, getTrendingProduct } from '../../api/apiCalls';
 import ScreenStyle from '../style/screenStyle';
 
@@ -27,7 +27,7 @@ function CarteScreen() {
 
         getTrendingProduct()
             .then((res) => {
-                setTrending(res.data.data[0]);
+                setTrending(res.data[0]);
             })
             .catch((err) => {
                 console.log(err);
@@ -42,9 +42,9 @@ function CarteScreen() {
         >
             {trending && !category && (
                 <TrendingProduct
-                    category={trending.category}
-                    name={trending.name}
-                    description={trending.desc}
+                    category={trending.nom_categorie}
+                    name={trending.nom_produit}
+                    description={trending.description}
                 />
             )}
 

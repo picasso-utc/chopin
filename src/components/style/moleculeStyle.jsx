@@ -225,6 +225,7 @@ const MoleculeStyle = StyleSheet.create({
         fontFamily: 'RobotoSlab-bold',
         width: '80%',
         overflow: 'hidden',
+        textTransform: 'capitalize',
     },
     productHeaderPrice: {
         color: 'white',
