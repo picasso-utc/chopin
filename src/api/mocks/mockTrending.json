@@ -1,7 +1,8 @@
 [
   {
-    "category": "Fruits",
-    "name": "Framboises",
-    "desc": "Viens découvrir nos framboises origine France dès aujourd’hui au Pic !"
+    "id": 1,
+    "nom_produit": "Mocked Coca",
+    "description": "Ouais on a aussi des basiques au Pic, viens te régaler d'un petit coca !",
+    "nom_categorie": "Softs"
   }
 ]

@@ -14,20 +14,20 @@ const Events = () => {
         getEvenements()
             .then((res) => {
                 // on ajoute un attribut nextEvent à chaque événement
-                res.data.data.nextEvent = false;
+                res.data.nextEvent = false;
 
                 // on recupere aujourd'hui
                 const today = new Date().toISOString().split('T')[0];
 
                 // on trie
-                res.data.data.sort((a, b) => (a.date > b.date ? 1 : -1));
+                res.data.sort((a, b) => (a.date > b.date ? 1 : -1));
 
                 // on check quel est le prochain evenement du semestre
-                const nextEvent = res.data.data.find((event) => event.date >= today);
+                const nextEvent = res.data.find((event) => event.date >= today);
 
                 // on set a true le prochain evenement du semestre
                 nextEvent.nextEvent = true;
-                setEvents(res.data.data);
+                setEvents(res.data);
             })
             .catch((err) => {
                 console.log(err);
