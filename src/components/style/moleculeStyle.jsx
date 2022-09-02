@@ -237,6 +237,22 @@ const MoleculeStyle = StyleSheet.create({
 
     // Molecules pour viedupicScreen.jsx
 
+    // style for telVSS.jsx
+    telVSSContainer: {
+        backgroundColor: 'rgba(115, 38, 115, 0.8)',
+        display: 'flex',
+        flexDirection: 'row',
+        width: '90%',
+        borderRadius: 20,
+        alignItems: 'center',
+        justifyContent: 'space-evenly',
+        padding: 15,
+    },
+    telVSSText: {
+        color: 'white',
+        fontSize: 20,
+    },
+
     // style for divLinkVideo.jsx
     linkVideoContainer: {
         width: 350,
