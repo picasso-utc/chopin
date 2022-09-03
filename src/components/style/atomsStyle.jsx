@@ -113,7 +113,7 @@ const AtomStyle = StyleSheet.create({
         color: '#FFFFFF',
         fontSize: 20,
         textTransform: 'uppercase',
-        width: 110,
+        width: 120,
         height: 25,
         transform: [{ rotate: '-90deg' }, { translateX: -45 }, { translateY: -45 }],
         textAlign: 'center',
