@@ -6,60 +6,76 @@ import NumDay from '../atoms/numDay';
 import NamePerm from '../atoms/namePerm';
 import MoleculeStyle from '../style/moleculeStyle';
 
-const DayCalendar = ({ id, day, morning, noon, night, today, weekday }) => (
-    <View
-        style={
-            today
-                ? MoleculeStyle.containerToday
-                : id % 2 === 0
-                ? MoleculeStyle.containerLight
-                : MoleculeStyle.containerDark
+const DayCalendar = ({ id, day, perms, today, weekday }) => {
+    let morning = null;
+    let noon = null;
+    let night = null;
+
+    perms.map(({ nom, periode }) => {
+        if (periode == 'M') {
+            morning = nom;
+        } else if (periode == 'D') {
+            noon = nom;
+        } else if (periode == 'S') {
+            night = nom;
         }
-    >
-        <TextDays weekday={weekday} />
-        <NumDay
-            day={day}
+    });
+
+    return (
+        <View
             style={
                 today
-                    ? MoleculeStyle.dayToday
+                    ? MoleculeStyle.containerToday
                     : id % 2 === 0
-                    ? MoleculeStyle.dayDark
-                    : MoleculeStyle.dayLight
+                    ? MoleculeStyle.containerLight
+                    : MoleculeStyle.containerDark
             }
-        />
-        <View style={MoleculeStyle.containerPerms}>
-            <NamePerm
-                name={morning}
+        >
+            <TextDays weekday={weekday} />
+            <NumDay
+                day={day}
                 style={
                     today
-                        ? MoleculeStyle.nameToday
+                        ? MoleculeStyle.dayToday
                         : id % 2 === 0
-                        ? MoleculeStyle.nameDark
-                        : MoleculeStyle.nameLight
+                        ? MoleculeStyle.dayDark
+                        : MoleculeStyle.dayLight
                 }
             />
-            <NamePerm
-                name={noon}
-                style={
-                    today
-                        ? MoleculeStyle.nameToday
-                        : id % 2 === 0
-                        ? MoleculeStyle.nameDark
-                        : MoleculeStyle.nameLight
-                }
-            />
-            <NamePerm
-                name={night}
-                style={
-                    today
-                        ? MoleculeStyle.nameToday
-                        : id % 2 === 0
-                        ? MoleculeStyle.nameDark
-                        : MoleculeStyle.nameLight
-                }
-            />
+            <View style={MoleculeStyle.containerPerms}>
+                <NamePerm
+                    name={morning}
+                    style={
+                        today
+                            ? MoleculeStyle.nameToday
+                            : id % 2 === 0
+                            ? MoleculeStyle.nameDark
+                            : MoleculeStyle.nameLight
+                    }
+                />
+                <NamePerm
+                    name={noon}
+                    style={
+                        today
+                            ? MoleculeStyle.nameToday
+                            : id % 2 === 0
+                            ? MoleculeStyle.nameDark
+                            : MoleculeStyle.nameLight
+                    }
+                />
+                <NamePerm
+                    name={night}
+                    style={
+                        today
+                            ? MoleculeStyle.nameToday
+                            : id % 2 === 0
+                            ? MoleculeStyle.nameDark
+                            : MoleculeStyle.nameLight
+                    }
+                />
+            </View>
         </View>
-    </View>
-);
+    );
+};
 
 export default DayCalendar;
