@@ -1,6 +1,32 @@
 import { StyleSheet } from 'react-native';
 
 const AtomStyle = StyleSheet.create({
+    // ATOMS pour home.jsx
+
+    newsPopUpHeaderText: {
+        fontSize: 20,
+        color: 'white',
+        fontFamily: 'RobotoSlab-bold',
+    },
+    imageNewsPopUp: {
+        width: '100%',
+        height: 150,
+        marginBottom: 20,
+    },
+    newsPopUpText: {
+        color: 'white',
+        fontSize: 14,
+        textAlign: 'justify',
+        fontFamily: 'RobotoSlab',
+        paddingHorizontal: 20,
+    },
+    newsPopUpCredits: {
+        color: 'white',
+        fontSize: 12,
+        fontFamily: 'RobotoSlab',
+        padding: 20,
+    },
+
     // ATOMS POUR charte.jsx
     chartetext: {
         fontSize: 12,
@@ -61,14 +87,12 @@ const AtomStyle = StyleSheet.create({
     // ATOMS POUR news.jsx
     headerNewsLatest: {
         backgroundColor: '#B22132',
-        height: 36,
         borderTopLeftRadius: 20,
         borderTopRightRadius: 20,
         alignItems: 'center',
         justifyContent: 'center',
     },
     headerNews: {
-        height: 36,
         borderTopLeftRadius: 20,
         borderTopRightRadius: 20,
         alignItems: 'center',
@@ -76,8 +100,12 @@ const AtomStyle = StyleSheet.create({
     },
     textHeaderNews: {
         fontSize: 20,
+        textTransform: 'uppercase',
         color: '#FFFFFF',
         fontFamily: 'RobotoSlab-medium',
+        width: '95%',
+        textAlign: 'center',
+        paddingVertical: 5,
     },
     imageNews: {
         width: '100%',
@@ -89,6 +117,7 @@ const AtomStyle = StyleSheet.create({
         color: '#FFFFFF',
         fontSize: 15,
         fontFamily: 'RobotoSlab',
+        textAlign: 'justify',
     },
 
     // ATOMS POUR dayCalendar.jsx
