@@ -419,22 +419,52 @@ const MoleculeStyle = StyleSheet.create({
 
     // Molecules for homeScreen.jsx
 
+    popUpPosition: {
+        position: 'absolute',
+        left: 0,
+        top: 0,
+    },
+    popUpBackground: {
+        flex: 1,
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: 'rgba(255,255,255,0.5)',
+    },
+    newsPopUpContainer: {
+        width: '90%',
+        flexDirection: 'column',
+        backgroundColor: '#000223',
+        borderRadius: 30,
+        maxHeight: '90%',
+    },
+    newsExitCrossContainer: {
+        width: '100%',
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        paddingVertical: 20,
+        paddingHorizontal: 35,
+    },
+    exitCrossText: {
+        fontSize: 18,
+        color: 'white',
+        fontFamily: 'RobotoSlab',
+    },
+
     // style for news.jsx
     newsContainerPressed: {
-        backgroundColor: 'rgba(256,256,256,0.33)',
         height: 'auto',
-        width: '90%',
-        borderRadius: 20,
-        marginTop: 20,
-        overflow: 'hidden',
     },
     newsContainer: {
-        backgroundColor: 'rgba(256,256,256,0.33)',
-        height: 316,
-        width: '90%',
-        borderRadius: 20,
-        marginTop: 20,
         overflow: 'hidden',
+    },
+    newsContainerOverall: {
+        backgroundColor: 'rgba(256,256,256,0.33)',
+        width: '95%',
+        borderRadius: 20,
+        paddingBottom: 5,
     },
 });
 

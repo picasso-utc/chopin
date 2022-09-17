@@ -11,6 +11,19 @@ const ScreenStyle = StyleSheet.create({
         flexDirection: 'column',
         alignItems: 'center',
     },
+    newsFlatListFooter: {
+        color: 'white',
+        fontSize: 14,
+        fontFamily: 'RobotoSlab',
+        textAlign: 'center',
+        padding: 40,
+    },
+
+    // style for homeScreen.jsx
+    flatListCentering: {
+        marginLeft: '2.5%',
+        width: '100%',
+    },
 
     // style for calendarScreen.jsx
     calendarScreenContainer: {
