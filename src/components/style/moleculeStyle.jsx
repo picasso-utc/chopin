@@ -113,6 +113,22 @@ const MoleculeStyle = StyleSheet.create({
 
     // Molecules for carteScreen.jsx
 
+    popUpContainer: {
+        width: '90%',
+        flexDirection: 'column',
+        alignItems: 'center',
+        backgroundColor: '#000223',
+        borderRadius: 30,
+        padding: 35,
+    },
+    exitCrossContainer: {
+        width: '100%',
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'flex-end',
+        marginBottom: 20,
+    },
+
     // style for productCategory.jsx
     productCategoryContainerDiagonal: {
         backgroundColor: 'rgba(255, 255, 255, 0.33)',
@@ -192,6 +208,7 @@ const MoleculeStyle = StyleSheet.create({
     },
     productListContainer: {
         width: '90%',
+        paddingBottom: 20,
     },
     productContainerRed: {
         marginTop: 20,

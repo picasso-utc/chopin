@@ -1,0 +1,52 @@
+[
+    {
+        "id": 1,
+        "weezId": 1403,
+        "amertume": 4,
+        "fruite": 1,
+        "acidite": 3,
+        "sucre": 3,
+        "description": "La Barbar dégage au travers de sa mousse crémeuse de doux arômes de malt de levure et de miel. L'ajout de miel lors du brassage permet d’apporter des notes fruitées et florales qui jouent en grande partie sur la douceur de la bière.",
+        "logoUrl": "http://127.0.0.1:8000/media/beerinfo/Logo_barabar.png"
+    },
+    {
+        "id": 2,
+        "weezId": 17310,
+        "amertume": 2,
+        "fruite": 1,
+        "acidite": 3,
+        "sucre": 3,
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the wi",
+        "logoUrl": "http://127.0.0.1:8000/media/beerinfo/Logo_barabar.png"
+    },
+    {
+        "id": 2,
+        "weezId": 1423,
+        "amertume": 2,
+        "fruite": 1,
+        "acidite": 3,
+        "sucre": 3,
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the wi",
+        "logoUrl": "http://127.0.0.1:8000/media/beerinfo/Logo_barabar_C5Dv8Iu.png"
+    },
+    {
+        "id": 2,
+        "weezId": 1203,
+        "amertume": 2,
+        "fruite": 1,
+        "acidite": 3,
+        "sucre": 3,
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the wi",
+        "logoUrl": "http://127.0.0.1:8000/media/beerinfo/Logo_barabar_C5Dv8Iu.png"
+    },
+    {
+        "id": 2,
+        "weezId": 1103,
+        "amertume": 2,
+        "fruite": 1,
+        "acidite": 3,
+        "sucre": 3,
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the wi",
+        "logoUrl": "http://127.0.0.1:8000/media/beerinfo/Logo_barabar_C5Dv8Iu.png"
+    }
+]
