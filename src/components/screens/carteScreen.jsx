@@ -1,19 +1,16 @@
 import React, { useEffect, useState } from 'react';
 
-import { Pressable, ScrollView, Text } from 'react-native';
+import { Pressable, ScrollView } from 'react-native';
 import { getCarte, getTrendingProduct } from '../../api/apiCalls';
 import ScreenStyle from '../style/screenStyle';
 
 import ProductCategory from '../molecules/productCategory';
 import { ProductImages } from '../atoms/productCategoryImagesPath';
-import ProductCategoryPicture from '../atoms/productCategoryPicture';
-import Products from '../molecules/products';
 import TrendingProduct from '../molecules/trendingProduct';
 
-function CarteScreen() {
+function CarteScreen({ navigation }) {
     const [carte, setCarte] = useState([]);
     const [trending, setTrending] = useState([]);
-    const [category, setCategory] = useState(null);
 
     useEffect(() => {
         getCarte()
@@ -40,51 +37,35 @@ function CarteScreen() {
             style={ScreenStyle.scrollScreenBackground}
             contentContainerStyle={ScreenStyle.carteContentContainer}
         >
-            {trending && !category && (
+            {trending && (
                 <TrendingProduct
                     category={trending.nom_categorie}
                     name={trending.nom_produit}
                     description={trending.description}
                 />
             )}
-
-            {category === null &&
-                carte.map((categories, key) => (
-                    <Pressable
-                        onPress={() => {
-                            setCategory(categories);
-                        }}
-                        key={categories.id}
-                    >
-                        <ProductCategory
-                            id={key}
-                            name={categories.name}
-                            picture={ProductImages[categories.name] || ProductImages.default}
-                        />
-                    </Pressable>
-                ))}
-
-            {category && (
-                <ScrollView
-                    style={{
-                        display: 'flex',
+            {carte.map((categories, key) => (
+                <Pressable
+                    onPress={() => {
+                        if (categories.name === 'Pressions' || categories.name === 'Bouteilles') {
+                            navigation.navigate('nestedBeerCarte', {
+                                category: categories,
+                            });
+                        } else {
+                            navigation.navigate('nestedCarte', {
+                                category: categories,
+                            });
+                        }
                     }}
-                    contentContainerStyle={ScreenStyle.ScreenScrollContainer}
+                    key={categories.id}
                 >
-                    <ProductCategoryPicture
-                        picture={ProductImages[category.name] || ProductImages.default}
+                    <ProductCategory
+                        id={key}
+                        name={categories.name}
+                        picture={ProductImages[categories.name] || ProductImages.default}
                     />
-                    <Products products={category.products} />
-                    <Pressable
-                        onPress={() => {
-                            setCategory(null);
-                        }}
-                        style={ScreenStyle.carteButtonContainer}
-                    >
-                        <Text style={ScreenStyle.carteButtonText}>Retour au Menu</Text>
-                    </Pressable>
-                </ScrollView>
-            )}
+                </Pressable>
+            ))}
         </ScrollView>
     );
 }

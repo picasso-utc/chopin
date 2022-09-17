@@ -8,7 +8,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import HomeScreen from '../components/screens/homeScreen';
 import CalendarScreen from '../components/screens/calendarScreen';
 import ViedupicScreen from '../components/screens/viedupicScreen';
-import CarteScreen from '../components/screens/carteScreen';
+import MenuNavigation from './menuNavigation';
 import ProfileScreen from '../components/screens/profileScreen';
 
 function Navigation() {
@@ -26,7 +26,7 @@ function Navigation() {
                             iconName = focused ? 'calendar' : 'calendar-outline';
                         } else if (route.name === 'VIE DU PIC') {
                             iconName = focused ? 'flower' : 'flower-outline';
-                        } else if (route.name === 'CARTE') {
+                        } else if (route.name === 'Carte') {
                             iconName = focused ? 'beer' : 'beer-outline';
                         } else if (route.name === 'PROFIL') {
                             iconName = focused ? 'person' : 'person-outline';
@@ -69,7 +69,13 @@ function Navigation() {
                 <Tab.Screen name="ACCUEIL" component={HomeScreen} />
                 <Tab.Screen name="CALENDRIER" component={CalendarScreen} />
                 <Tab.Screen name="VIE DU PIC" component={ViedupicScreen} />
-                <Tab.Screen name="CARTE" component={CarteScreen} />
+                <Tab.Screen
+                    name="Carte"
+                    options={{
+                        headerShown: false,
+                    }}
+                    component={MenuNavigation}
+                />
                 <Tab.Screen name="PROFIL" component={ProfileScreen} />
             </Tab.Navigator>
         </NavigationContainer>
