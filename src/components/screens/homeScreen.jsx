@@ -1,29 +1,56 @@
-import React from 'react';
-import { ScrollView } from 'react-native';
+import React, { useEffect, useState } from 'react';
+import { FlatList, SafeAreaView, Text, View } from 'react-native';
 
 import News from '../molecules/news';
 import ScreenStyle from '../style/screenStyle';
+import { getNewsletter } from '../../api/apiCalls';
+import NewsPopUp from '../molecules/newsPopUp';
 
 function HomeScreen() {
+    const [news, setNews] = useState([]);
+    const [displayed, setDisplayed] = useState([]);
+    const [visible, setVisible] = useState(false);
+
+    useEffect(() => {
+        getNewsletter()
+            .then((res) => {
+                res.data.sort((a, b) => (a.publication_date < b.publication_date ? 1 : -1));
+                const today = new Date().toISOString();
+                setNews(res.data.filter((a) => a.publication_date <= today));
+            })
+            .catch((err) => {
+                console.log(err);
+            })
+            .done();
+    }, []);
+
+    const Separator = () => <View style={{ height: 20 }} />;
+    const Footer = () => (
+        <Text style={ScreenStyle.newsFlatListFooter}>
+            Il n&apos;y a rien d&apos;autre à voir ici... à bientôt !
+        </Text>
+    );
+
     return (
-        <ScrollView
-            style={ScreenStyle.scrollScreenBackground}
-            contentContainerStyle={ScreenStyle.ScreenScrollContainer}
-            scrollEnabled
-        >
-            <News
-                latest
-                name="PERM HALLOWEEN"
-                linkimg={require('../../../assets/placeholderLatestNews.png')}
-                content="Exsistit autem hoc loco quaedam quaestio subdifficilis, num quando amici novi, digni amicitia, veteribus sint anteponendi, ut equis vetulis teneros anteponere solemus. Indigna homine dubitatio! Non enim debent esse amicitiarum sicut aliarum rerum satietates; veterrima quaeque, ut ea vina, quae vetustatem ferunt, esse debet suavissima; verumque illud est, quod dicitur, multos modios salis simul edendos esse, ut amicitiae munus expletum sit.Post hanc adclinis Libano monti Phoenice, regio plena gratiarum et venustatis, urbibus decorata magnis et pulchris; in quibus amoenitate celebritateque nominum Tyros excellit, Sidon et Berytus isdemque pares Emissa et Damascus saeculis condita priscis.Itaque verae amictiae difficillime reperiuntur in iis qui in honoribus reque publica versantur; ubi enim istum invenias qui honorem amici anteponat suo? Quid? Haec ut omittam, quam graves, quam difficiles plerisque videntur calamitatum societates! Ad quas non est facile inventu qui descendant. Quamquam Ennius recte."
+        <SafeAreaView style={ScreenStyle.scrollScreenBackground}>
+            <FlatList
+                style={ScreenStyle.flatListCentering}
+                data={news}
+                renderItem={(item) => (
+                    <News
+                        newsInfo={item.item}
+                        latest={item.index === 0}
+                        setDisplayed={setDisplayed}
+                        setVisible={setVisible}
+                        visible={visible}
+                    />
+                )}
+                ItemSeparatorComponent={Separator}
+                ListFooterComponent={Footer}
+                initialNumToRender={2}
             />
-            <News
-                latest={false}
-                name="ETUVILLE"
-                linkimg={require('../../../assets/placeholderNews1.png')}
-                content="Le Pic sera fermé à Etuville frère on veut aller au Parc Astérix aussi hein ça va être bad lourd pour une fois on profitera sans servir des bières là..."
-            />
-        </ScrollView>
+            <NewsPopUp modalVisible={visible} setModalVisible={setVisible} newsInfo={displayed} />
+        </SafeAreaView>
     );
 }
 
