@@ -148,6 +148,81 @@ const AtomStyle = StyleSheet.create({
         textAlign: 'center',
         fontFamily: 'RobotoSlab-medium',
     },
+
+    //ATOMS POUR popUp.jsx
+    imageBeer: { height: 104, width: 104 },
+    popUpHeader: {
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        alignSelf: 'center',
+        width: '90%',
+    },
+    beerNameText: {
+        fontSize: 28,
+        fontFamily: 'RobotoSlab-bold',
+        color: 'white',
+        textAlign: 'center',
+        marginTop: 10,
+    },
+    beerPriceContainer: {
+        backgroundColor: '#B22132',
+        borderRadius: 20,
+        marginTop: 10,
+        paddingHorizontal: 20,
+        paddingVertical: 5,
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    beerPriceText: {
+        fontSize: 22,
+        fontFamily: 'RobotoSlab-bold',
+        color: 'white',
+        padding: 0,
+    },
+    ratingRowContainer: {
+        display: 'flex',
+        width: '100%',
+        flexDirection: 'row',
+        justifyContent: 'flex-end',
+        alignItems: 'center',
+        marginTop: 10,
+        paddingRight: 20,
+    },
+    ratingText: {
+        fontSize: 20,
+        fontFamily: 'RobotoSlab-medium',
+        color: 'white',
+        textTransform: 'capitalize',
+        paddingRight: 10,
+    },
+    ratingFullCircle: {
+        width: 16,
+        height: 16,
+        borderRadius: 10,
+        backgroundColor: '#FFFFFF',
+        marginRight: 5,
+    },
+    ratingEmptyCircle: {
+        width: 16,
+        height: 16,
+        borderRadius: 10,
+        borderWidth: 2,
+        borderColor: '#FFFFFF',
+        marginRight: 5,
+    },
+    ratingAlignCircles: {
+        display: 'flex',
+        flexDirection: 'row',
+    },
+    popUpText: {
+        fontFamily: 'RobotoSlab',
+        fontSize: 14,
+        color: 'white',
+        textAlign: 'justify',
+        marginTop: 10,
+        marginBottom: 5,
+    },
 });
 
 export default AtomStyle;

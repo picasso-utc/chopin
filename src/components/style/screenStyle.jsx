@@ -5,6 +5,7 @@ const ScreenStyle = StyleSheet.create({
     scrollScreenBackground: {
         backgroundColor: '#000223',
         height: '100%',
+        display: 'flex',
     },
     ScreenScrollContainer: {
         display: 'flex',
