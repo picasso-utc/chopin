@@ -7,8 +7,10 @@ import Navigation from './src/navigation/navigation';
 
 // Keep the splash screen visible while we fetch resources
 SplashScreen.preventAutoHideAsync();
+
 export default function App() {
     const [appIsReady, setAppIsReady] = useState(false);
+
     useEffect(() => {
         async function prepare() {
             try {
