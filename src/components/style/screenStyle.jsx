@@ -1,9 +1,10 @@
 import { StyleSheet } from 'react-native';
+import { styleConstants } from './styleConstants';
 
 const ScreenStyle = StyleSheet.create({
     // General screen styles
     scrollScreenBackground: {
-        backgroundColor: '#000223',
+        backgroundColor: styleConstants.color_general,
         height: '100%',
         display: 'flex',
     },
@@ -13,7 +14,7 @@ const ScreenStyle = StyleSheet.create({
         alignItems: 'center',
     },
     newsFlatListFooter: {
-        color: 'white',
+        color: styleConstants.color_details,
         fontSize: 14,
         fontFamily: 'RobotoSlab',
         textAlign: 'center',
@@ -22,13 +23,12 @@ const ScreenStyle = StyleSheet.create({
 
     // style for homeScreen.jsx
     flatListCentering: {
-        marginLeft: '2.5%',
         width: '100%',
     },
 
     // style for calendarScreen.jsx
     calendarScreenContainer: {
-        backgroundColor: '#000223',
+        backgroundColor: styleConstants.color_general,
         height: '100%',
         display: 'flex',
         flexDirection: 'column',
@@ -45,13 +45,13 @@ const ScreenStyle = StyleSheet.create({
     },
     carteButtonContainer: {
         marginTop: 20,
-        backgroundColor: 'rgba(255, 255, 255, 0.33)',
+        backgroundColor: styleConstants.color_back2,
         padding: 15,
         borderRadius: 20,
         marginBottom: 20,
     },
     carteButtonText: {
-        color: 'white',
+        color: styleConstants.color_details,
         fontSize: 16,
         fontFamily: 'RobotoSlab',
     },
@@ -59,18 +59,18 @@ const ScreenStyle = StyleSheet.create({
     // style for profileScreen.jsx NOT CONNECTED
     profileConnectionButtonText: {
         fontSize: 20,
-        color: 'white',
+        color: styleConstants.color_details,
         fontFamily: 'RobotoSlab',
     },
     profileConnectionButtonContainer: {
-        backgroundColor: '#B22132',
+        backgroundColor: styleConstants.color_enhance,
         padding: 20,
         borderRadius: 30,
         width: 250,
         alignItems: 'center',
     },
     profileAlertText: {
-        color: 'white',
+        color: styleConstants.color_details,
         fontSize: 20,
         textAlign: 'center',
         width: 250,
@@ -78,12 +78,20 @@ const ScreenStyle = StyleSheet.create({
     },
     profileConnectionContainer: {
         marginTop: 20,
-        backgroundColor: 'rgba(255, 255, 255, 0.33)',
+        backgroundColor: styleConstants.color_back2,
         width: 330,
         height: 250,
         borderRadius: 20,
         alignItems: 'center',
+    },
+    profileConnectionTextContainer: {
+        height: '80%',
         justifyContent: 'space-evenly',
+    },
+    profileTeddyImage: {
+        width: '80%',
+        height: '80%',
+        resizeMode: 'contain',
     },
 
     // style for profileScreen.jsx CONNECTED
@@ -93,7 +101,7 @@ const ScreenStyle = StyleSheet.create({
         marginBottom: 20,
     },
     profileHeaderText: {
-        color: 'white',
+        color: styleConstants.color_details,
         fontSize: 20,
         fontFamily: 'RobotoSlab',
     },

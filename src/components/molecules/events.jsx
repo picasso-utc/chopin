@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Text, View } from 'react-native';
 
-import { getEvenements } from '../../api/apiCalls';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import EventTimelineDate from '../atoms/eventTimelineDate';
 import EventTimelineLine from '../atoms/eventTimelineLine';
 import EventTimelineDot from '../atoms/eventTimelineDot';
@@ -11,28 +11,11 @@ const Events = () => {
     const [events, setEvents] = useState([]);
 
     useEffect(() => {
-        getEvenements()
-            .then((res) => {
-                // on ajoute un attribut nextEvent à chaque événement
-                res.data.nextEvent = false;
-
-                // on recupere aujourd'hui
-                const today = new Date().toISOString().split('T')[0];
-
-                // on trie
-                res.data.sort((a, b) => (a.date > b.date ? 1 : -1));
-
-                // on check quel est le prochain evenement du semestre
-                const nextEvent = res.data.find((event) => event.date >= today);
-
-                // on set a true le prochain evenement du semestre
-                nextEvent.nextEvent = true;
-                setEvents(res.data);
-            })
-            .catch((err) => {
-                console.log(err);
-            })
-            .done();
+        const getEvents = async () => {
+            const eventsFetched = await AsyncStorage.getItem('events');
+            setEvents(JSON.parse(eventsFetched));
+        };
+        getEvents();
     }, []);
 
     return (
@@ -44,7 +27,7 @@ const Events = () => {
                         <EventTimelineLine />
                         <EventTimelineDot nextEvent={event.nextEvent} />
                         <EventTimelineDate date={event.date} />
-                        <Text style={MoleculeStyle.eventText}>{event.nom}</Text>
+                        <Text style={MoleculeStyle.eventText}>{event.name}</Text>
                     </View>
                 ))}
             </View>

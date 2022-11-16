@@ -1,11 +1,12 @@
 import { StyleSheet } from 'react-native';
+import { styleConstants } from './styleConstants';
 
 const AtomStyle = StyleSheet.create({
     // ATOMS pour home.jsx
 
     newsPopUpHeaderText: {
         fontSize: 20,
-        color: 'white',
+        color: styleConstants.color_details,
         fontFamily: 'RobotoSlab-bold',
     },
     imageNewsPopUp: {
@@ -14,14 +15,14 @@ const AtomStyle = StyleSheet.create({
         marginBottom: 20,
     },
     newsPopUpText: {
-        color: 'white',
+        color: styleConstants.color_details,
         fontSize: 14,
         textAlign: 'justify',
         fontFamily: 'RobotoSlab',
         paddingHorizontal: 20,
     },
     newsPopUpCredits: {
-        color: 'white',
+        color: styleConstants.color_details,
         fontSize: 12,
         fontFamily: 'RobotoSlab',
         padding: 20,
@@ -30,7 +31,7 @@ const AtomStyle = StyleSheet.create({
     // ATOMS POUR charte.jsx
     chartetext: {
         fontSize: 12,
-        color: 'white',
+        color: styleConstants.color_details,
         marginBottom: 20,
         textAlign: 'justify',
         fontFamily: 'RobotoSlab',
@@ -40,25 +41,25 @@ const AtomStyle = StyleSheet.create({
     eventTimelineDate: {
         width: 60,
         fontSize: 16,
-        color: 'white',
+        color: styleConstants.color_details,
         fontFamily: 'RobotoSlab-bold',
     },
     eventTimelineDotNext: {
-        backgroundColor: '#B22132',
+        backgroundColor: styleConstants.color_enhance,
         width: 19,
         height: 19,
         borderRadius: 90,
         marginRight: 30,
     },
     eventTimelineDot: {
-        backgroundColor: 'white',
+        backgroundColor: styleConstants.color_details,
         width: 19,
         height: 19,
         borderRadius: 90,
         marginRight: 30,
     },
     eventTimelineLine: {
-        borderLeftColor: 'white',
+        borderLeftColor: styleConstants.color_details,
         borderLeftWidth: 1,
         borderStyle: 'solid',
         height: 40,
@@ -66,27 +67,34 @@ const AtomStyle = StyleSheet.create({
     },
 
     // ATOMS POUR howTo.jsx
-    headerHowTo: {
-        fontSize: 20,
-        marginTop: 20,
-        color: '#FFFFFF',
-        fontFamily: 'RobotoSlab',
-    },
     imageHowTo: {
-        height: 84,
-        width: 84,
+        flex: 1,
+        height: '100%',
+        resizeMode: 'cover',
+        borderBottomLeftRadius: 20,
+        borderTopLeftRadius: 20,
+    },
+    titleHowTo: {
+        fontSize: 18,
+        color: styleConstants.color_details,
+        fontFamily: 'RobotoSlab-bold',
+        textAlign: 'center',
+        paddingTop: 20,
+        paddingHorizontal: 20,
+        textTransform: 'uppercase',
     },
     textHowTo: {
-        height: 48,
-        width: 225,
-        fontSize: 12,
-        color: '#FFFFFF',
+        fontSize: 16,
+        color: styleConstants.color_details,
         fontFamily: 'RobotoSlab',
+        textAlign: 'center',
+        paddingHorizontal: 20,
+        paddingVertical: 20,
     },
 
     // ATOMS POUR news.jsx
     headerNewsLatest: {
-        backgroundColor: '#B22132',
+        backgroundColor: styleConstants.color_enhance,
         borderTopLeftRadius: 20,
         borderTopRightRadius: 20,
         alignItems: 'center',
@@ -101,7 +109,7 @@ const AtomStyle = StyleSheet.create({
     textHeaderNews: {
         fontSize: 20,
         textTransform: 'uppercase',
-        color: '#FFFFFF',
+        color: styleConstants.color_details,
         fontFamily: 'RobotoSlab-medium',
         width: '95%',
         textAlign: 'center',
@@ -113,8 +121,9 @@ const AtomStyle = StyleSheet.create({
     },
     textNews: {
         width: '100%',
-        padding: 15,
-        color: '#FFFFFF',
+        paddingHorizontal: 15,
+        paddingVertical: 10,
+        color: styleConstants.color_details,
         fontSize: 15,
         fontFamily: 'RobotoSlab',
         textAlign: 'justify',
@@ -122,13 +131,13 @@ const AtomStyle = StyleSheet.create({
 
     // ATOMS POUR dayCalendar.jsx
     textNamePerm: {
-        color: '#FFFFFF',
+        color: styleConstants.color_details,
         fontSize: 14,
         fontFamily: 'RobotoSlab-medium',
     },
     textNumPerm: {
         fontSize: 24,
-        color: '#FFFFFF',
+        color: styleConstants.color_details,
         fontFamily: 'RobotoSlab-medium',
         textAlign: 'center',
     },
@@ -139,7 +148,7 @@ const AtomStyle = StyleSheet.create({
         marginRight: 20,
     },
     textDayText: {
-        color: '#FFFFFF',
+        color: styleConstants.color_details,
         fontSize: 20,
         textTransform: 'uppercase',
         width: 120,
@@ -149,7 +158,7 @@ const AtomStyle = StyleSheet.create({
         fontFamily: 'RobotoSlab-medium',
     },
 
-    //ATOMS POUR popUp.jsx
+    // ATOMS POUR popUp.jsx
     imageBeer: { height: 104, width: 104 },
     popUpHeader: {
         display: 'flex',
@@ -161,14 +170,13 @@ const AtomStyle = StyleSheet.create({
     beerNameText: {
         fontSize: 28,
         fontFamily: 'RobotoSlab-bold',
-        color: 'white',
+        color: styleConstants.color_details,
         textAlign: 'center',
-        marginTop: 10,
+        marginBottom: 20,
     },
     beerPriceContainer: {
-        backgroundColor: '#B22132',
+        backgroundColor: styleConstants.color_enhance,
         borderRadius: 20,
-        marginTop: 10,
         paddingHorizontal: 20,
         paddingVertical: 5,
         alignItems: 'center',
@@ -177,8 +185,7 @@ const AtomStyle = StyleSheet.create({
     beerPriceText: {
         fontSize: 22,
         fontFamily: 'RobotoSlab-bold',
-        color: 'white',
-        padding: 0,
+        color: styleConstants.color_details,
     },
     ratingRowContainer: {
         display: 'flex',
@@ -186,42 +193,44 @@ const AtomStyle = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'flex-end',
         alignItems: 'center',
-        marginTop: 10,
-        paddingRight: 20,
+        marginBottom: 10,
     },
     ratingText: {
         fontSize: 20,
         fontFamily: 'RobotoSlab-medium',
-        color: 'white',
+        color: styleConstants.color_details,
         textTransform: 'capitalize',
-        paddingRight: 10,
+        flex: 1,
+        textAlign: 'right',
     },
     ratingFullCircle: {
         width: 16,
         height: 16,
         borderRadius: 10,
-        backgroundColor: '#FFFFFF',
-        marginRight: 5,
+        backgroundColor: styleConstants.color_details,
+        marginRight: 7,
     },
     ratingEmptyCircle: {
         width: 16,
         height: 16,
         borderRadius: 10,
         borderWidth: 2,
-        borderColor: '#FFFFFF',
-        marginRight: 5,
+        borderColor: styleConstants.color_details,
+        marginRight: 7,
     },
     ratingAlignCircles: {
         display: 'flex',
         flexDirection: 'row',
+        marginLeft: 10,
+        flex: 1,
     },
     popUpText: {
         fontFamily: 'RobotoSlab',
         fontSize: 14,
-        color: 'white',
+        color: styleConstants.color_details,
         textAlign: 'justify',
-        marginTop: 10,
-        marginBottom: 5,
+        paddingHorizontal: 15,
+        paddingVertical: 15,
     },
 });
 

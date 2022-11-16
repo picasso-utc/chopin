@@ -18,7 +18,7 @@ const News = ({ newsInfo, latest, setDisplayed, setVisible, visible }) => {
                 r
             >
                 <HeaderNews content={newsInfo.title} latest={latest} />
-                <ImageNews lien={{ uri: newsInfo.image }} />
+                <ImageNews lien={newsInfo.image} />
                 <TextNews content={newsInfo.content} />
             </Pressable>
         </View>

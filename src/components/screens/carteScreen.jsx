@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
 import { Pressable, ScrollView } from 'react-native';
-import { getCarte, getTrendingProduct } from '../../api/apiCalls';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import ScreenStyle from '../style/screenStyle';
 
 import ProductCategory from '../molecules/productCategory';
@@ -10,26 +10,21 @@ import TrendingProduct from '../molecules/trendingProduct';
 
 function CarteScreen({ navigation }) {
     const [carte, setCarte] = useState([]);
-    const [trending, setTrending] = useState([]);
+    const [trending, setTrending] = useState(null);
 
     useEffect(() => {
-        getCarte()
-            .then((res) => {
-                setCarte(res.data);
-            })
-            .catch((err) => {
-                console.log(err);
-            })
-            .done();
+        const getCarte = async () => {
+            const carteFetched = await AsyncStorage.getItem('carte');
+            setCarte(JSON.parse(carteFetched));
+        };
 
-        getTrendingProduct()
-            .then((res) => {
-                setTrending(res.data[0]);
-            })
-            .catch((err) => {
-                console.log(err);
-            })
-            .done();
+        const getTrending = async () => {
+            const trendingFetched = await AsyncStorage.getItem('trending');
+            setTrending(JSON.parse(trendingFetched));
+        };
+
+        getCarte();
+        getTrending();
     }, []);
 
     return (
@@ -59,11 +54,13 @@ function CarteScreen({ navigation }) {
                     }}
                     key={categories.id}
                 >
-                    <ProductCategory
-                        id={key}
-                        name={categories.name}
-                        picture={ProductImages[categories.name] || ProductImages.default}
-                    />
+                    {categories.products.length !== 0 && (
+                        <ProductCategory
+                            id={key}
+                            name={categories.name}
+                            picture={ProductImages[categories.name] || ProductImages.default}
+                        />
+                    )}
                 </Pressable>
             ))}
         </ScrollView>

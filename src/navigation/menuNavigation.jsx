@@ -4,6 +4,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import NestedCarteScreen from '../components/screens/nestedCarteScreen';
 import CarteScreen from '../components/screens/carteScreen';
 import BeerCarteScreen from '../components/screens/beerCarteScreen';
+import { styleConstants } from '../components/style/styleConstants';
 
 const Stack = createStackNavigator();
 
@@ -11,22 +12,23 @@ function MenuNavigation() {
     return (
         <Stack.Navigator
             screenOptions={() => ({
+                headerTitleAlign: 'center',
                 headerStyle: [
                     {
-                        backgroundColor: '#000223',
+                        backgroundColor: styleConstants.color_general,
                         shadowColor: 'transparent',
-                        height: 109,
+                        height: 110,
                     },
                 ],
                 headerTitleStyle: [
                     {
-                        color: 'white',
+                        color: styleConstants.color_details,
                         fontSize: 28,
                         fontFamily: 'RobotoSlab-bold',
                         textTransform: 'uppercase',
                     },
                 ],
-                headerTintColor: 'white',
+                headerTintColor: styleConstants.color_details,
                 headerBackTitleVisible: false,
             })}
         >
