@@ -9,14 +9,12 @@ const PopUpHeader = ({ name, price, url }) => {
     const roundedPrice = (Math.round(price) / 100).toFixed(2);
 
     return (
-        <View style={{}}>
-            <View style={AtomStyle.popUpHeader}>
-                <ImageBeer src={url} />
+        <View style={AtomStyle.popUpHeader}>
+            <ImageBeer src={url} />
 
-                <Text style={AtomStyle.beerNameText}>{name}</Text>
-                <View style={AtomStyle.beerPriceContainer}>
-                    <Text style={AtomStyle.beerPriceText}>{roundedPrice}€</Text>
-                </View>
+            <Text style={AtomStyle.beerNameText}>{name}</Text>
+            <View style={AtomStyle.beerPriceContainer}>
+                <Text style={AtomStyle.beerPriceText}>{roundedPrice}€</Text>
             </View>
         </View>
     );

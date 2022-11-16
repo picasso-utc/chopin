@@ -1,9 +1,10 @@
-import PopUp from './popUp';
 import React, { useEffect, useState } from 'react';
 import { View, Text, Pressable } from 'react-native';
+import Ionicons from 'react-native-vector-icons/Ionicons';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import PopUp from './popUp';
 
 import MoleculeStyle from '../style/moleculeStyle';
-import { getBeerInfo } from '../../api/apiCalls';
 
 const BeerProducts = ({ products }) => {
     const [beerInfo, setBeerInfo] = useState([]);
@@ -14,32 +15,40 @@ const BeerProducts = ({ products }) => {
     const [name, setName] = useState('');
     const [price, setPrice] = useState('');
 
-    const PressManagement = (name, price, beerInfo, id, modalVisible) => {
-        setName(name);
-        setPrice(price);
-        setInfo(beerInfo.find((item) => item.weezId === id));
-        setModalVisible(!modalVisible);
+    const PressManagement = (pressName, pressPrice, pressBeerInfo, id, pressModalVisible) => {
+        setName(pressName);
+        setPrice(pressPrice);
+        let infos = pressBeerInfo.find((item) => item.weez_id === id);
+        if (infos === undefined) {
+            infos = {
+                description: "Cette biere n'a pas encore de description, nous en sommes désolés.",
+                acidite: 0,
+                amertume: 0,
+                fruite: 0,
+                sucre: 0,
+                undef: true,
+            };
+        }
+        setInfo(infos);
+        setModalVisible(!pressModalVisible);
     };
 
     useEffect(() => {
-        getBeerInfo()
-            .then((res) => {
-                setBeerInfo(res.data);
-            })
-            .catch((err) => {
-                console.log(err);
-            })
-            .done();
+        const getBeerInfo = async () => {
+            const beerInfoFetched = await AsyncStorage.getItem('beerInfo');
+            setBeerInfo(JSON.parse(beerInfoFetched));
+        };
+        getBeerInfo();
     }, []);
 
     return (
         <View style={MoleculeStyle.productListContainer}>
-            {products.map(({ name, price, id }, key) => (
+            {products.map((item, key) => (
                 <Pressable
                     onPress={() => {
-                        PressManagement(name, price, beerInfo, id, modalVisible);
+                        PressManagement(item.name, item.price, beerInfo, item.id, modalVisible);
                     }}
-                    key={key}
+                    key={[item.id, key]}
                     style={
                         key % 2 === 0
                             ? MoleculeStyle.productContainerRed
@@ -47,10 +56,8 @@ const BeerProducts = ({ products }) => {
                     }
                 >
                     <View style={MoleculeStyle.productHeaderContainer}>
-                        <Text style={MoleculeStyle.productHeaderText}>{name}</Text>
-                        <Text style={MoleculeStyle.productHeaderPrice}>{`${(
-                            Math.round(price) / 100
-                        ).toFixed(2)}€`}</Text>
+                        <Text style={MoleculeStyle.productHeaderText}>{item.name}</Text>
+                        <Ionicons name="arrow-forward" color="white" size={26} />
                     </View>
                 </Pressable>
             ))}

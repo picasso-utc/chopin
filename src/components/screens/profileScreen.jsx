@@ -1,55 +1,39 @@
-import React, { useState } from 'react';
-import { Pressable, ScrollView, Text, View } from 'react-native';
-
-import Ionic from 'react-native-vector-icons/Ionicons';
+import React, { useRef } from 'react';
+import { Animated, Easing, ScrollView, Text, View } from 'react-native';
 
 import Credits from '../molecules/credits';
-import Charte from '../molecules/charte';
-import Feedback from '../molecules/feedback';
 import ScreenStyle from '../style/screenStyle';
 
 function ProfileScreen() {
-    const [connected, setConnected] = useState(false);
+    const fadeAnim = useRef(new Animated.ValueXY({ x: -200, y: 50 })).current;
+
+    Animated.timing(fadeAnim, {
+        toValue: { x: 0, y: 0 },
+        duration: 1500,
+        useNativeDriver: true,
+        easing: Easing.elastic(1.3),
+    }).start();
 
     return (
         <ScrollView
             style={ScreenStyle.scrollScreenBackground}
             contentContainerStyle={ScreenStyle.ScreenScrollContainer}
         >
-            {connected && (
-                <View>
-                    <View style={ScreenStyle.profileHeaderContainer}>
-                        <Text style={ScreenStyle.profileHeaderText}>BIENVENUE Eliott !</Text>
-                        <Pressable
-                            style={ScreenStyle.profileLogOutButton}
-                            onPress={() => {
-                                setConnected((current) => !current);
-                            }}
-                        >
-                            <Ionic name="log-out-outline" color="white" size={30} />
-                        </Pressable>
-                    </View>
-
-                    <Charte />
-                    <Feedback />
-                </View>
-            )}
-            {!connected && (
-                <View style={ScreenStyle.profileConnectionContainer}>
+            <View style={ScreenStyle.profileConnectionContainer}>
+                <View style={ScreenStyle.profileConnectionTextContainer}>
+                    <Text style={ScreenStyle.profileAlertText}>Section en travaux...</Text>
                     <Text style={ScreenStyle.profileAlertText}>
-                        Cette partie est réservée aux étudiants de l’UTC, veuillez vous connecter.
+                        Plein de nouvelles choses arrivent, soyez patients !
                     </Text>
-
-                    <Pressable
-                        style={ScreenStyle.profileConnectionButtonContainer}
-                        onPress={() => {
-                            setConnected((current) => !current);
-                        }}
-                    >
-                        <Text style={ScreenStyle.profileConnectionButtonText}>Connexion CAS</Text>
-                    </Pressable>
                 </View>
-            )}
+                <Animated.Image
+                    style={[
+                        { transform: fadeAnim.getTranslateTransform() },
+                        ScreenStyle.profileTeddyImage,
+                    ]}
+                    source={require('../../../assets/generalImages/teddy.png')}
+                />
+            </View>
             <Credits />
         </ScrollView>
     );

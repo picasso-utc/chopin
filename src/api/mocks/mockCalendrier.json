@@ -19,6 +19,24 @@
             "date": "2022-09-08",
             "hour": null,
             "periode": "D"
+        },
+        {
+            "responsable": "Maxime VAILLANT",
+            "semestre": 22,
+            "nom": "PermTest",
+            "description": 0,
+            "date": "2022-09-08",
+            "hour": null,
+            "periode": "M"
+        },
+        {
+            "responsable": "Maxime VAILLANT",
+            "semestre": 22,
+            "nom": "PermTest",
+            "description": 0,
+            "date": "2022-09-08",
+            "hour": null,
+            "periode": "S"
         }
     ],
     "2022-09-09": [

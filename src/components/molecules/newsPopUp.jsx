@@ -1,5 +1,6 @@
 import React from 'react';
-import { Modal, Pressable, ScrollView, Text, View } from 'react-native';
+import { Modal, Pressable, ScrollView, View } from 'react-native';
+import Ionicons from 'react-native-vector-icons/Ionicons';
 import MoleculeStyle from '../style/moleculeStyle';
 import NewsPopUpHeader from '../atoms/newsPopUpHeader';
 import NewsPopUpPhoto from '../atoms/newsPopUpPhoto';
@@ -18,12 +19,15 @@ const NewsPopUp = ({ modalVisible, setModalVisible, newsInfo }) => (
             <View style={MoleculeStyle.newsPopUpContainer}>
                 <View style={MoleculeStyle.newsExitCrossContainer}>
                     <NewsPopUpHeader title={newsInfo.title} />
-                    <Pressable onPress={() => setModalVisible(!modalVisible)}>
-                        <Text style={MoleculeStyle.exitCrossText}>X</Text>
+                    <Pressable
+                        style={MoleculeStyle.newsExitCross}
+                        onPress={() => setModalVisible(!modalVisible)}
+                    >
+                        <Ionicons name="close" color="white" size={26} />
                     </Pressable>
                 </View>
                 <ScrollView>
-                    <NewsPopUpPhoto image={{ uri: newsInfo.image }} />
+                    <NewsPopUpPhoto image={newsInfo.image} />
                     <NewsPopUpText text={newsInfo.content} />
                     <NewsPopUpCredit date={newsInfo.publication_date} />
                 </ScrollView>

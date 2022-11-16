@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { FlatList, SafeAreaView, Text, View } from 'react-native';
 
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import News from '../molecules/news';
 import ScreenStyle from '../style/screenStyle';
-import { getNewsletter } from '../../api/apiCalls';
 import NewsPopUp from '../molecules/newsPopUp';
 
 function HomeScreen() {
@@ -12,16 +12,11 @@ function HomeScreen() {
     const [visible, setVisible] = useState(false);
 
     useEffect(() => {
-        getNewsletter()
-            .then((res) => {
-                res.data.sort((a, b) => (a.publication_date < b.publication_date ? 1 : -1));
-                const today = new Date().toISOString();
-                setNews(res.data.filter((a) => a.publication_date <= today));
-            })
-            .catch((err) => {
-                console.log(err);
-            })
-            .done();
+        const getNews = async () => {
+            const newsFetched = await AsyncStorage.getItem('news');
+            setNews(JSON.parse(newsFetched));
+        };
+        getNews();
     }, []);
 
     const Separator = () => <View style={{ height: 20 }} />;

@@ -12,13 +12,14 @@ const DayCalendar = ({ id, day, perms, today, weekday }) => {
     let night = null;
 
     perms.map(({ nom, periode }) => {
-        if (periode == 'M') {
+        if (periode === 'M') {
             morning = nom;
-        } else if (periode == 'D') {
+        } else if (periode === 'D') {
             noon = nom;
-        } else if (periode == 'S') {
+        } else if (periode === 'S') {
             night = nom;
         }
+        return 0;
     });
 
     return (

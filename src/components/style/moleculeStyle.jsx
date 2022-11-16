@@ -1,4 +1,5 @@
 import { StyleSheet } from 'react-native';
+import { styleConstants } from './styleConstants';
 
 const MoleculeStyle = StyleSheet.create({
     // Molecules for profileScreen.jsx
@@ -13,9 +14,9 @@ const MoleculeStyle = StyleSheet.create({
         borderRadius: 20,
     },
     charteEntete: {
-        color: 'white',
+        color: styleConstants.color_details,
         textAlign: 'center',
-        backgroundColor: '#B22132',
+        backgroundColor: styleConstants.color_enhance,
         fontSize: 20,
         padding: 20,
         width: '100%',
@@ -23,7 +24,7 @@ const MoleculeStyle = StyleSheet.create({
         fontFamily: 'RobotoSlab-medium',
     },
     charteTextContainer: {
-        backgroundColor: 'rgba(255, 255, 255, 0.33)',
+        backgroundColor: styleConstants.color_back2,
         padding: 20,
         alignItems: 'center',
         justifyContent: 'center',
@@ -39,17 +40,17 @@ const MoleculeStyle = StyleSheet.create({
         height: 15,
     },
     charteCheckboxText: {
-        color: 'white',
+        color: styleConstants.color_details,
         fontSize: 14,
         fontFamily: 'RobotoSlab',
     },
-    charteConfrimContainer: {
-        backgroundColor: '#B22132',
+    charteConfirmContainer: {
+        backgroundColor: styleConstants.color_enhance,
         borderRadius: 20,
         width: 100,
     },
     charteConfirmText: {
-        color: 'white',
+        color: styleConstants.color_details,
         padding: 10,
         textAlign: 'center',
         fontSize: 16,
@@ -59,28 +60,35 @@ const MoleculeStyle = StyleSheet.create({
     // style for credits.jsx
     creditsContainer: {
         alignItems: 'center',
-        marginTop: 200,
+        marginTop: '60%',
+    },
+    socialsContainer: {
+        display: 'flex',
+        flexDirection: 'row',
+        width: '50%',
+        justifyContent: 'space-evenly',
+        marginBottom: 20,
     },
     creditsTextVersion: {
-        color: 'white',
+        color: styleConstants.color_details,
         fontSize: 14,
         marginBottom: 10,
         fontFamily: 'RobotoSlab',
     },
     creditsTextDevBy: {
-        color: 'white',
+        color: styleConstants.color_details,
         fontSize: 14,
         fontFamily: 'RobotoSlab',
     },
     creditsTextPic: {
-        color: '#B22132',
+        color: styleConstants.color_enhance,
         fontSize: 14,
         fontFamily: 'RobotoSlab',
     },
 
     // style for feedback.jsx
     feedbackContainer: {
-        backgroundColor: 'rgba(255, 255, 255, 0.33)',
+        backgroundColor: styleConstants.color_back2,
         alignItems: 'center',
         justifyContent: 'center',
         height: 230,
@@ -88,12 +96,12 @@ const MoleculeStyle = StyleSheet.create({
         borderRadius: 20,
     },
     feedbackHeader: {
-        color: 'white',
+        color: styleConstants.color_details,
         fontSize: 20,
         fontFamily: 'RobotoSlab-medium',
     },
     feedbackSubHeader: {
-        color: 'white',
+        color: styleConstants.color_details,
         fontSize: 14,
         marginBottom: 20,
         fontFamily: 'RobotoSlab',
@@ -101,11 +109,11 @@ const MoleculeStyle = StyleSheet.create({
     feedbackInput: {
         paddingTop: 20,
         padding: 20,
-        backgroundColor: '#000223',
+        backgroundColor: styleConstants.color_back1,
         width: 300,
         height: 140,
         borderRadius: 20,
-        color: 'white',
+        color: styleConstants.color_details,
         fontSize: 14,
         textAlignVertical: 'top',
         fontFamily: 'RobotoSlab',
@@ -114,24 +122,26 @@ const MoleculeStyle = StyleSheet.create({
     // Molecules for carteScreen.jsx
 
     popUpContainer: {
-        width: '90%',
+        width: '95%',
         flexDirection: 'column',
         alignItems: 'center',
-        backgroundColor: '#000223',
+        backgroundColor: styleConstants.color_back1,
         borderRadius: 30,
-        padding: 35,
+        padding: 20,
     },
     exitCrossContainer: {
         width: '100%',
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'flex-end',
-        marginBottom: 20,
+        position: 'absolute',
+        top: 20,
+        right: 20,
     },
 
     // style for productCategory.jsx
     productCategoryContainerDiagonal: {
-        backgroundColor: 'rgba(255, 255, 255, 0.33)',
+        backgroundColor: styleConstants.color_back2,
         height: 165,
         width: 165,
         borderRadius: 20,
@@ -142,7 +152,7 @@ const MoleculeStyle = StyleSheet.create({
         alignItems: 'center',
     },
     productCategoryContainer: {
-        backgroundColor: 'rgba(255, 255, 255, 0)',
+        backgroundColor: styleConstants.color_back1,
         height: 165,
         width: 165,
         borderRadius: 20,
@@ -159,7 +169,7 @@ const MoleculeStyle = StyleSheet.create({
         height: 110,
     },
     productCategoryName: {
-        color: '#fff',
+        color: styleConstants.color_details,
         position: 'absolute',
         bottom: 10,
         fontSize: 20,
@@ -170,14 +180,15 @@ const MoleculeStyle = StyleSheet.create({
 
     // Style for products.jsx
     trendingProductContainer: {
-        backgroundColor: '#B22132',
+        backgroundColor: styleConstants.color_enhance,
         borderRadius: 20,
-        padding: 10,
+        width: '90%',
+        padding: 15,
     },
     trendingProductTitle: {
         textTransform: 'uppercase',
         textAlign: 'center',
-        color: 'white',
+        color: styleConstants.color_details,
         fontSize: 20,
         marginBottom: 10,
         fontFamily: 'RobotoSlab-bold',
@@ -190,19 +201,24 @@ const MoleculeStyle = StyleSheet.create({
     trendingProductTextsContainer: {
         display: 'flex',
         flexDirection: 'column',
-        width: '60%',
+        width: '70%',
         justifyContent: 'space-evenly',
+        marginHorizontal: 10,
     },
     trendingProductName: {
         textTransform: 'uppercase',
         textAlign: 'center',
-        color: 'white',
-        fontSize: 24,
+        color: styleConstants.color_details,
+        fontSize: 20,
         fontFamily: 'RobotoSlab-bold',
+    },
+    trendingProductPicture: {
+        height: '100%',
+        maxWidth: '30%',
     },
     trendingProductDesc: {
         textAlign: 'center',
-        color: 'white',
+        color: styleConstants.color_details,
         fontSize: 14,
         fontFamily: 'RobotoSlab',
     },
@@ -214,22 +230,20 @@ const MoleculeStyle = StyleSheet.create({
         marginTop: 20,
         borderStyle: 'solid',
         borderWidth: 5,
-        borderColor: '#B22132',
+        borderColor: styleConstants.color_enhance,
         paddingHorizontal: 20,
-        paddingVertical: 20,
-        borderRadius: 30,
-        height: 78,
+        paddingVertical: 12,
+        borderRadius: 20,
         justifyContent: 'center',
     },
     productContainerWhite: {
         marginTop: 20,
         borderStyle: 'solid',
         borderWidth: 5,
-        borderColor: 'white',
+        borderColor: styleConstants.color_details,
         paddingHorizontal: 20,
-        paddingVertical: 20,
-        borderRadius: 30,
-        height: 78,
+        paddingVertical: 12,
+        borderRadius: 20,
         justifyContent: 'center',
     },
     productHeaderContainer: {
@@ -237,27 +251,28 @@ const MoleculeStyle = StyleSheet.create({
         justifyContent: 'space-between',
     },
     productHeaderText: {
-        color: 'white',
+        color: styleConstants.color_details,
         fontSize: 20,
         fontFamily: 'RobotoSlab-bold',
-        width: '80%',
+        width: '70%',
         overflow: 'hidden',
         textTransform: 'capitalize',
     },
     productHeaderPrice: {
-        color: 'white',
+        color: styleConstants.color_details,
         fontSize: 20,
         fontFamily: 'RobotoSlab-bold',
         width: '20%',
         overflow: 'scroll',
         textAlign: 'right',
+        marginRight: 10,
     },
 
     // Molecules pour viedupicScreen.jsx
 
     // style for telVSS.jsx
     telVSSContainer: {
-        backgroundColor: 'rgba(115, 38, 115, 0.8)',
+        backgroundColor: styleConstants.color_tel_vss,
         display: 'flex',
         flexDirection: 'row',
         width: '90%',
@@ -267,7 +282,7 @@ const MoleculeStyle = StyleSheet.create({
         padding: 15,
     },
     telVSSText: {
-        color: 'white',
+        color: styleConstants.color_details,
         fontSize: 20,
     },
 
@@ -278,7 +293,7 @@ const MoleculeStyle = StyleSheet.create({
         borderRadius: 20,
         display: 'flex',
         flexDirection: 'row',
-        backgroundColor: 'rgba(256,256,256,0.33)',
+        backgroundColor: styleConstants.color_back2,
         alignItems: 'center',
         justifyContent: 'flex-start',
         marginTop: 20,
@@ -289,7 +304,7 @@ const MoleculeStyle = StyleSheet.create({
     },
     linkVideoText: {
         fontSize: 14,
-        color: '#FFFFFF',
+        color: styleConstants.color_details,
         width: 266,
         fontFamily: 'RobotoSlab',
     },
@@ -302,7 +317,7 @@ const MoleculeStyle = StyleSheet.create({
     eventHeaderText: {
         fontSize: 20,
         textTransform: 'uppercase',
-        color: '#fff',
+        color: styleConstants.color_details,
         marginBottom: 20,
         textAlign: 'center',
         fontFamily: 'RobotoSlab',
@@ -312,30 +327,30 @@ const MoleculeStyle = StyleSheet.create({
         alignItems: 'center',
     },
     eventText: {
-        color: 'white',
+        color: styleConstants.color_details,
         marginVertical: 10,
+        paddingLeft: 10,
         fontSize: 14,
         fontFamily: 'RobotoSlab',
+        maxWidth: '70%',
     },
 
     // style for howTo.jsx
     howToContainer: {
-        width: 350,
-        height: 241,
+        marginLeft: '5%',
+        width: '90%',
+        height: 250,
         borderRadius: 20,
-        backgroundColor: 'rgba(256,256,256,0.33)',
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        marginTop: 10,
-    },
-    howToRowContainer: {
-        width: 318,
+        backgroundColor: styleConstants.color_back2,
         display: 'flex',
         flexDirection: 'row',
         alignItems: 'center',
-        marginTop: 10,
-        justifyContent: 'space-between',
+        justifyContent: 'space-around',
+    },
+    contentHowTo: {
+        flex: 2,
+        display: 'flex',
+        justifyContent: 'space-around',
     },
 
     // Molecules for calendarScreen.jsx
@@ -355,7 +370,7 @@ const MoleculeStyle = StyleSheet.create({
         height: 150,
         display: 'flex',
         flexDirection: 'row',
-        backgroundColor: 'rgba(256,256,256,0.33)',
+        backgroundColor: styleConstants.color_back2,
         borderRadius: 20,
         alignItems: 'center',
         marginBottom: 20,
@@ -367,7 +382,7 @@ const MoleculeStyle = StyleSheet.create({
         flexDirection: 'row',
         borderRadius: 20,
         borderWidth: 3,
-        borderColor: '#B22132',
+        borderColor: styleConstants.color_enhance,
         alignItems: 'center',
         marginBottom: 10,
     },
@@ -378,7 +393,7 @@ const MoleculeStyle = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         borderRadius: 25,
-        backgroundColor: '#B22132',
+        backgroundColor: styleConstants.color_enhance,
     },
     dayDark: {
         display: 'flex',
@@ -387,7 +402,7 @@ const MoleculeStyle = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         borderRadius: 45,
-        backgroundColor: '#000223',
+        backgroundColor: styleConstants.color_back1,
     },
     dayLight: {
         display: 'flex',
@@ -396,7 +411,7 @@ const MoleculeStyle = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         borderRadius: 25,
-        backgroundColor: 'rgba(256,256,256,0.33)',
+        backgroundColor: styleConstants.color_back2,
     },
     containerPerms: {
         display: 'flex',
@@ -410,7 +425,7 @@ const MoleculeStyle = StyleSheet.create({
         width: 205,
         height: 30,
         borderRadius: 30,
-        backgroundColor: '#B22132',
+        backgroundColor: styleConstants.color_enhance,
         display: 'flex',
         justifyContent: 'center',
         paddingLeft: 20,
@@ -419,7 +434,7 @@ const MoleculeStyle = StyleSheet.create({
         width: 205,
         height: 30,
         borderRadius: 30,
-        backgroundColor: '#000223',
+        backgroundColor: styleConstants.color_general,
         display: 'flex',
         justifyContent: 'center',
         paddingLeft: 20,
@@ -428,7 +443,7 @@ const MoleculeStyle = StyleSheet.create({
         width: 205,
         height: 30,
         borderRadius: 30,
-        backgroundColor: 'rgba(256,256,256,0.33)',
+        backgroundColor: styleConstants.color_back2,
         display: 'flex',
         justifyContent: 'center',
         paddingLeft: 20,
@@ -446,12 +461,13 @@ const MoleculeStyle = StyleSheet.create({
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: 'rgba(255,255,255,0.5)',
+        backgroundColor: styleConstants.color_back3,
     },
     newsPopUpContainer: {
-        width: '90%',
+        width: '95%',
+        maxWidth: 700,
         flexDirection: 'column',
-        backgroundColor: '#000223',
+        backgroundColor: styleConstants.color_back1,
         borderRadius: 30,
         maxHeight: '90%',
     },
@@ -459,15 +475,14 @@ const MoleculeStyle = StyleSheet.create({
         width: '100%',
         display: 'flex',
         flexDirection: 'row',
-        justifyContent: 'space-between',
         alignItems: 'center',
         paddingVertical: 20,
         paddingHorizontal: 35,
     },
-    exitCrossText: {
-        fontSize: 18,
-        color: 'white',
-        fontFamily: 'RobotoSlab',
+    newsExitCross: {
+        position: 'absolute',
+        top: 20,
+        right: 20,
     },
 
     // style for news.jsx
@@ -478,8 +493,10 @@ const MoleculeStyle = StyleSheet.create({
         overflow: 'hidden',
     },
     newsContainerOverall: {
-        backgroundColor: 'rgba(256,256,256,0.33)',
-        width: '95%',
+        backgroundColor: styleConstants.color_back2,
+        width: '90%',
+        alignSelf: 'center',
+        maxWidth: 600,
         borderRadius: 20,
         paddingBottom: 5,
     },

@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "nom": "Mock Event 1",
+    "name": "Mock Event 1",
     "date": "2022-11-05",
     "responsable": "menfoutest",
     "description": "grave un test la desc on en a pas besoin de toute facon sah",
@@ -11,7 +11,7 @@
   },
   {
     "id": 2,
-    "nom": "Strip Tease de Maxime",
+    "name": "Strip Tease de Maxime",
     "date": "2022-08-17",
     "responsable": "menfoutest",
     "description": "grave un test la desc on en a pas besoin de toute facon sah",
@@ -21,7 +21,7 @@
   },
   {
     "id": 3,
-    "nom": "Geo fait son Show",
+    "name": "Geo fait son Show",
     "date": "2022-10-09",
     "responsable": "menfoutest",
     "description": "grave un test la desc on en a pas besoin de toute facon sah",
@@ -31,7 +31,7 @@
   },
   {
     "id": 4,
-    "nom": "La chanson d'Adrien",
+    "name": "La chanson d'Adrien",
     "date": "2022-12-21",
     "responsable": "menfoutest",
     "description": "grave un test la desc on en a pas besoin de toute facon sah",
@@ -41,7 +41,7 @@
   },
   {
     "id": 5,
-    "nom": "Les prezs nous virent",
+    "name": "Les prezs nous virent",
     "date": "2022-09-01",
     "responsable": "menfoutest",
     "description": "grave un test la desc on en a pas besoin de toute facon sah",
