@@ -1,0 +1,65 @@
+[
+  {
+    "id": 1,
+    "author_id": "simonadr",
+    "title": "LA RENTREE",
+    "creation_date": "2022-07-25T18:44:13.064763+02:00",
+    "publication_date": "2022-09-10T18:44:13.064763+02:00",
+    "image": "https://images.bfmtv.com/lxDejkzbN1a0835fOs4KctAtxnM=/4x4:5508x3100/1600x0/images/-157872.jpg",
+    "content": "Salut la team c'est la rentrée, Lorem Ipsum is simply dummy text of the printing and typesetting industry. Salut la team c'est la rentrée, Lorem Ipsum is simply dummy text of the printing and typesetting industry. Salut la team c'est la rentrée, Lorem Ipsum is simply dummy text of the printing and typesetting industry. Salut la team c'est la rentrée, Lorem Ipsum is simply dummy text of the printing and typesetting industry. Salut la team c'est la rentrée, Lorem Ipsum is simply dummy text of the printing and typesetting industry. Salut la team c'est la rentrée, Lorem Ipsum is simply dummy text of the printing and typesetting industry. Salut la team c'est la rentrée, Lorem Ipsum is simply dummy text of the printing and typesetting industry. Salut la team c'est la rentrée, Lorem Ipsum is simply dummy text of the printing and typesetting industry. Salut la team c'est la rentrée, Lorem Ipsum is simply dummy text of the printing and typesetting industry. Salut la team c'est la rentrée, Lorem Ipsum is simply dummy text of the printing and typesetting industry. Salut la team c'est la rentrée, Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+  },
+  {
+    "id": 2,
+    "author_id": "simonadr",
+    "title": "TESTING DE L APPLI",
+    "creation_date": "2022-07-29T18:44:13.064763+02:00",
+    "publication_date": "2022-09-11T18:44:13.064763+02:00",
+    "image": "https://d1bvpoagx8hqbg.cloudfront.net/originals/les-merveilles-monde-00bc0c49e71b5840028aa7dcf5371dc9.jpg",
+    "content": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of \"de Finibus Bonorum et Malorum\" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance."
+  },
+  {
+    "id": 3,
+    "author_id": "simonadr",
+    "title": "LANCEMENT DE L APPLI",
+    "creation_date": "2022-08-08T18:44:13.064763+02:00",
+    "publication_date": "2022-09-20T19:44:13.064763+02:00",
+    "image": "https://d1bvpoagx8hqbg.cloudfront.net/originals/les-merveilles-monde-00bc0c49e71b5840028aa7dcf5371dc9.jpg",
+    "content": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English."
+  },
+  {
+    "id": 4,
+    "author_id": "simonadr",
+    "title": "LE MOCK ME LES BRISE",
+    "creation_date": "2022-08-09T18:44:13.064763+02:00",
+    "publication_date": "2022-09-01T18:44:13.064763+02:00",
+    "image": "https://d1bvpoagx8hqbg.cloudfront.net/originals/les-merveilles-monde-00bc0c49e71b5840028aa7dcf5371dc9.jpg",
+    "content": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet."
+  },
+  {
+    "id": 5,
+    "author_id": "simonadr",
+    "title": "LA RENTREE",
+    "creation_date": "2022-07-25T18:44:13.064763+02:00",
+    "publication_date": "2022-09-10T18:44:13.064763+02:00",
+    "image": "https://images.bfmtv.com/lxDejkzbN1a0835fOs4KctAtxnM=/4x4:5508x3100/1600x0/images/-157872.jpg",
+    "content": "Salut la team c'est la rentrée, Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+  },
+  {
+    "id": 6,
+    "author_id": "simonadr",
+    "title": "TESTING DE L APPLI",
+    "creation_date": "2022-07-29T18:44:13.064763+02:00",
+    "publication_date": "2022-09-11T18:44:13.064763+02:00",
+    "image": "https://d1bvpoagx8hqbg.cloudfront.net/originals/les-merveilles-monde-00bc0c49e71b5840028aa7dcf5371dc9.jpg",
+    "content": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of \"de Finibus Bonorum et Malorum\" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance."
+  },
+  {
+    "id": 7,
+    "author_id": "simonadr",
+    "title": "LA RENTREE",
+    "creation_date": "2022-07-25T18:44:13.064763+02:00",
+    "publication_date": "2022-09-10T18:44:13.064763+02:00",
+    "image": "https://images.bfmtv.com/lxDejkzbN1a0835fOs4KctAtxnM=/4x4:5508x3100/1600x0/images/-157872.jpg",
+    "content": "Salut la team c'est la rentrée, Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+  }
+]

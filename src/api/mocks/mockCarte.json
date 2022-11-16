@@ -1,0 +1,596 @@
+[
+  {
+    "id": 3,
+    "name": "Softs",
+    "products": [
+      {
+        "name": "Mocked Coca",
+        "price": 65,
+        "id": 20
+      },
+      {
+        "name": "Coca Cherry",
+        "price": 65,
+        "id": 19
+      },
+      {
+        "name": "Coca Zero",
+        "price": 65,
+        "id": 18
+      },
+      {
+        "name": "Fanta Citron",
+        "price": 65,
+        "id": 4505
+      },
+      {
+        "name": "Fanta exotique",
+        "price": 85,
+        "id": 17505
+      },
+      {
+        "name": "Fanta Orange",
+        "price": 65,
+        "id": 21
+      },
+      {
+        "name": "Fuze tea",
+        "price": 82,
+        "id": 15577
+      },
+      {
+        "name": "Ice Tea P\u00eache",
+        "price": 65,
+        "id": 22
+      },
+      {
+        "name": "Jus Pomme Cassis",
+        "price": 106,
+        "id": 16977
+      },
+      {
+        "name": "Limonade",
+        "price": 40,
+        "id": 1800
+      },
+      {
+        "name": "Oasis Orange",
+        "price": 65,
+        "id": 8611
+      },
+      {
+        "name": "Oasis Pomme-Cassis-Framboise",
+        "price": 65,
+        "id": 1657
+      },
+      {
+        "name": "Oasis Tropical",
+        "price": 65,
+        "id": 25
+      },
+      {
+        "name": "Orangina",
+        "price": 65,
+        "id": 2185
+      },
+      {
+        "name": "Pepsi bouteille",
+        "price": 100,
+        "id": 15342
+      },
+      {
+        "name": "Perrier",
+        "price": 55,
+        "id": 26
+      },
+      {
+        "name": "P\u00e9tillant Pomme",
+        "price": 115,
+        "id": 16872
+      },
+      {
+        "name": "Politesse",
+        "price": 1,
+        "id": 11247
+      },
+      {
+        "name": "Red Bull",
+        "price": 135,
+        "id": 2045
+      },
+      {
+        "name": "Schweppes agrumes",
+        "price": 65,
+        "id": 23
+      },
+      {
+        "name": "Schweppes ginger ale",
+        "price": 115,
+        "id": 15344
+      },
+      {
+        "name": "Schweppes tonic bouteille",
+        "price": 120,
+        "id": 15343
+      },
+      {
+        "name": "Seven Up bouteille",
+        "price": 100,
+        "id": 15341
+      },
+      {
+        "name": "Sirop",
+        "price": 10,
+        "id": 1686
+      },
+      {
+        "name": "Sprite",
+        "price": 65,
+        "id": 16475
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "name": "Pressions",
+    "products": [
+      {
+        "name": "Barbar Blonde",
+        "price": 170,
+        "id": 1403
+      },
+      {
+        "name": "Castor IPA",
+        "price": 175,
+        "id": 16755
+      },
+      {
+        "name": "Cidre Pas Pareil Brut",
+        "price": 125,
+        "id": 17310
+      },
+      {
+        "name": "Cuv\u00e9e des Trolls",
+        "price": 175,
+        "id": 457
+      },
+      {
+        "name": "Delirium Tremens",
+        "price": 180,
+        "id": 458
+      },
+      {
+        "name": "Kasteel Rouge",
+        "price": 180,
+        "id": 14821
+      },
+      {
+        "name": "Rebelle Ambr\u00e9e",
+        "price": 160,
+        "id": 17554
+      },
+      {
+        "name": "Rebelle Blanche",
+        "price": 150,
+        "id": 17577
+      },
+      {
+        "name": "Rolling Pils",
+        "price": 180,
+        "id": 17644
+      },
+      {
+        "name": "Val Dieu Triple",
+        "price": 190,
+        "id": 12492
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Bouteilles",
+    "products": [
+      {
+        "name": "Baptist Blanche",
+        "price": 150,
+        "id": 14474
+      },
+      {
+        "name": "Carolus Triple",
+        "price": 180,
+        "id": 1394
+      },
+      {
+        "name": "Chimay Bleue",
+        "price": 185,
+        "id": 1399
+      },
+      {
+        "name": "Chouffe Blonde",
+        "price": 170,
+        "id": 16614
+      },
+      {
+        "name": "Courant",
+        "price": 170,
+        "id": 17546
+      },
+      {
+        "name": "Duvel",
+        "price": 175,
+        "id": 1397
+      },
+      {
+        "name": "Grand Cru St Feuillien",
+        "price": 195,
+        "id": 890
+      },
+      {
+        "name": "Paillette IPA",
+        "price": 170,
+        "id": 17287
+      },
+      {
+        "name": "Peach Mel Bush",
+        "price": 185,
+        "id": 1395
+      },
+      {
+        "name": "Poir\u00e9",
+        "price": 135,
+        "id": 16586
+      },
+      {
+        "name": "Stouterik",
+        "price": 185,
+        "id": 17342
+      },
+      {
+        "name": "Super Sanglier",
+        "price": 170,
+        "id": 16907
+      }
+    ]
+  },
+  {
+    "id": 450,
+    "name": "Repas",
+    "products": [
+      {
+        "name": "1/3 baguette",
+        "price": 30,
+        "id": 7852
+      },
+      {
+        "name": "1/4 de tartinade v\u00e9g\u00e9",
+        "price": 50,
+        "id": 17209
+      },
+      {
+        "name": "1/4 terrine",
+        "price": 40,
+        "id": 17011
+      },
+      {
+        "name": "Bruschetta",
+        "price": 285,
+        "id": 17016
+      },
+      {
+        "name": "Invendus boulangerie",
+        "price": 250,
+        "id": 17029
+      },
+      {
+        "name": "Pain Bagnat",
+        "price": 285,
+        "id": 17015
+      },
+      {
+        "name": "panini",
+        "price": 285,
+        "id": 10357
+      },
+      {
+        "name": "Pizza",
+        "price": 285,
+        "id": 17013
+      },
+      {
+        "name": "Quiche",
+        "price": 285,
+        "id": 17014
+      },
+      {
+        "name": "Repas de la veille",
+        "price": 100,
+        "id": 17027
+      },
+      {
+        "name": "Riz uncle ben's",
+        "price": 135,
+        "id": 10086
+      },
+      {
+        "name": "Sandwich boulangerie",
+        "price": 285,
+        "id": 15714
+      }
+    ]
+  },
+  {
+    "id": 384,
+    "name": "Fruits",
+    "products": [
+      {
+        "name": "Abricot",
+        "price": 50,
+        "id": 14963
+      },
+      {
+        "name": "Cerise",
+        "price": 115,
+        "id": 17649
+      },
+      {
+        "name": "Clementine",
+        "price": 45,
+        "id": 17154
+      },
+      {
+        "name": "La poire",
+        "price": 50,
+        "id": 17153
+      },
+      {
+        "name": "Past\u00e8que",
+        "price": 100,
+        "id": 17789
+      },
+      {
+        "name": "Pomme",
+        "price": 45,
+        "id": 17418
+      },
+      {
+        "name": "Tasse radis",
+        "price": 80,
+        "id": 17417
+      }
+    ]
+  },
+  {
+    "id": 825,
+    "name": "Vrac",
+    "products": [
+      {
+        "name": "Banane Chips",
+        "price": 32,
+        "id": 17001
+      },
+      {
+        "name": "Biscuit Comt\u00e9",
+        "price": 90,
+        "id": 16992
+      },
+      {
+        "name": "Biscuit et pic\u00e9",
+        "price": 90,
+        "id": 17250
+      },
+      {
+        "name": "Biscuit tomate",
+        "price": 130,
+        "id": 16994
+      },
+      {
+        "name": "Bonbons mous",
+        "price": 105,
+        "id": 17548
+      },
+      {
+        "name": "Boule 3 choco",
+        "price": 100,
+        "id": 17003
+      },
+      {
+        "name": "Bretzels",
+        "price": 33,
+        "id": 16995
+      },
+      {
+        "name": "Bretzels au choco",
+        "price": 160,
+        "id": 17650
+      },
+      {
+        "name": "Cacahu\u00e8tes grill\u00e9es",
+        "price": 76,
+        "id": 16999
+      },
+      {
+        "name": "Coeur Orange",
+        "price": 48,
+        "id": 16998
+      },
+      {
+        "name": "Cookie Caramel",
+        "price": 18,
+        "id": 16993
+      },
+      {
+        "name": "Cookie Tout Choco",
+        "price": 67,
+        "id": 17002
+      },
+      {
+        "name": "Crousti Noisette",
+        "price": 75,
+        "id": 16996
+      },
+      {
+        "name": "Dragibus",
+        "price": 65,
+        "id": 17547
+      },
+      {
+        "name": "Napp\u00e9 chocolat",
+        "price": 33,
+        "id": 17344
+      },
+      {
+        "name": "Noix de cajou",
+        "price": 160,
+        "id": 16997
+      },
+      {
+        "name": "Orange Pavot",
+        "price": 30,
+        "id": 17000
+      },
+      {
+        "name": "Raisins secs",
+        "price": 60,
+        "id": 17651
+      },
+      {
+        "name": "Saucisson Charc'UT",
+        "price": 220,
+        "id": 17343
+      },
+      {
+        "name": "Tigre",
+        "price": 28,
+        "id": 17004
+      }
+    ]
+  },
+  {
+    "id": 221,
+    "name": "Petit Dej",
+    "products": [
+      {
+        "name": "Beignet",
+        "price": 100,
+        "id": 17031
+      },
+      {
+        "name": "Caf\u00e9",
+        "price": 30,
+        "id": 85
+      },
+      {
+        "name": "Cookie",
+        "price": 85,
+        "id": 12039
+      },
+      {
+        "name": "Croissant",
+        "price": 55,
+        "id": 1674
+      },
+      {
+        "name": "Pain au chocolatine",
+        "price": 65,
+        "id": 1675
+      },
+      {
+        "name": "Roul\u00e9 Nutella",
+        "price": 80,
+        "id": 17030
+      },
+      {
+        "name": "Suisse",
+        "price": 80,
+        "id": 17152
+      },
+      {
+        "name": "Th\u00e9 en Vrac",
+        "price": 30,
+        "id": 17008
+      }
+    ]
+  },
+  {
+    "id": 199,
+    "name": "Pampryls",
+    "products": [
+      {
+        "name": "PAMPRYL Abricot",
+        "price": 65,
+        "id": 34
+      },
+      {
+        "name": "PAMPRYL Ananas",
+        "price": 65,
+        "id": 37
+      },
+      {
+        "name": "PAMPRYL Fraise",
+        "price": 65,
+        "id": 1900
+      },
+      {
+        "name": "PAMPRYL OAC",
+        "price": 65,
+        "id": 1803
+      },
+      {
+        "name": "PAMPRYL Orange",
+        "price": 65,
+        "id": 30
+      },
+      {
+        "name": "PAMPRYL Pamplemousse",
+        "price": 65,
+        "id": 36
+      },
+      {
+        "name": "PAMPRYL Pomme",
+        "price": 65,
+        "id": 31
+      },
+      {
+        "name": "PAMPRYL Tomate",
+        "price": 65,
+        "id": 3679
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Snacks Sucr\u00e9s",
+    "products": [
+      {
+        "name": "Brioche",
+        "price": 20,
+        "id": 17010
+      },
+      {
+        "name": "Gaufre liegeoise",
+        "price": 20,
+        "id": 14470
+      },
+      {
+        "name": "Glace",
+        "price": 230,
+        "id": 17504
+      },
+      {
+        "name": "Madeleine",
+        "price": 10,
+        "id": 14469
+      },
+      {
+        "name": "Muffin",
+        "price": 100,
+        "id": 9339
+      },
+      {
+        "name": "Pom'Pote",
+        "price": 40,
+        "id": 527
+      }
+    ]
+  }
+]

@@ -1,5 +1,7 @@
 node_modules/
+.vscode/
 .expo/
+.vscode/
 dist/
 npm-debug.*
 *.jks
@@ -9,6 +11,9 @@ npm-debug.*
 *.mobileprovision
 *.orig.*
 web-build/
+.idea/
+
+yarn-error.log
 
 # macOS
 .DS_Store
