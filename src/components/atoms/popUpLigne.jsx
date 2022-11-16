@@ -1,12 +1,12 @@
-import { PopUpRating } from './popUpRating';
 import React from 'react';
 import { View, Text } from 'react-native';
+import PopUpRating from './popUpRating';
 import AtomStyle from '../style/atomsStyle';
 
 const PopUpLigne = ({ name, rating }) => {
-    let list = [];
+    const list = [];
 
-    for (let i = 0; i < rating; i++) {
+    for (let i = 0; i < rating; i += 1) {
         list[i] = 'full';
     }
 

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useLayoutEffect } from 'react';
 import { ScrollView } from 'react-native';
 
 import ProductCategoryPicture from '../atoms/productCategoryPicture';
@@ -8,7 +8,10 @@ import { ProductImages } from '../atoms/productCategoryImagesPath';
 
 function BeerCarteScreen({ navigation, route }) {
     const category = route.params.category;
-    navigation.setOptions({ title: category.name });
+
+    useLayoutEffect(() => {
+        navigation.setOptions({ title: category.name });
+    }, [navigation, route]);
 
     return (
         <ScrollView

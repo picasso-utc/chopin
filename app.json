@@ -1,8 +1,9 @@
 {
   "expo": {
-    "name": "chopin",
+    "name": "Picasso UTC",
+    "owner": "picasso_utc",
     "slug": "chopin",
-    "version": "1.0.0",
+    "version": "0.1.4",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
@@ -18,16 +19,24 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": false,
+      "bundleIdentifier": "fr.utc.picasso.chopin"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "fr.utc.picasso.chopin",
+      "versionCode": 4
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "3b002c19-b6ff-41aa-ba47-3ebbea64b886"
+      }
     }
   }
 }

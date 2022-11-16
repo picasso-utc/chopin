@@ -11,7 +11,7 @@ const TrendingProduct = ({ category, name, description }) => (
         <View style={moleculeStyle.trendingProductSubContainer}>
             <ProductCategoryPicture
                 picture={ProductImages[category] || ProductImages.default}
-                style={{ height: 96 }}
+                style={moleculeStyle.trendingProductPicture}
             />
             <View style={moleculeStyle.trendingProductTextsContainer}>
                 <Text style={moleculeStyle.trendingProductName}>{name}</Text>

@@ -1,15 +1,17 @@
-import { React } from 'react';
+import React from 'react';
 
 import Ionic from 'react-native-vector-icons/Ionicons';
 
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
+import { Image } from 'react-native';
 import HomeScreen from '../components/screens/homeScreen';
 import CalendarScreen from '../components/screens/calendarScreen';
 import ViedupicScreen from '../components/screens/viedupicScreen';
 import MenuNavigation from './menuNavigation';
 import ProfileScreen from '../components/screens/profileScreen';
+import { styleConstants } from '../components/style/styleConstants';
 
 function Navigation() {
     const Tab = createBottomTabNavigator();
@@ -25,7 +27,15 @@ function Navigation() {
                         } else if (route.name === 'CALENDRIER') {
                             iconName = focused ? 'calendar' : 'calendar-outline';
                         } else if (route.name === 'VIE DU PIC') {
-                            iconName = focused ? 'flower' : 'flower-outline';
+                            return (
+                                <Image
+                                    source={require('../../assets/generalImages/logo_bottom_bar.png')}
+                                    style={{
+                                        width: focused ? 36 : 24,
+                                        height: focused ? 36 : 24,
+                                    }}
+                                />
+                            );
                         } else if (route.name === 'Carte') {
                             iconName = focused ? 'beer' : 'beer-outline';
                         } else if (route.name === 'PROFIL') {
@@ -34,33 +44,33 @@ function Navigation() {
                         const trueSize = focused ? 36 : 24;
                         return <Ionic name={iconName} size={trueSize} color={color} />;
                     },
-                    tabBarActiveTintColor: 'white',
-                    tabBarInactiveTintColor: 'white',
+                    tabBarActiveTintColor: styleConstants.color_details,
+                    tabBarInactiveTintColor: styleConstants.color_details,
                     tabBarShowLabel: false,
+                    headerTitleAlign: 'center',
                     tabBarStyle: [
                         {
-                            backgroundColor: '#B22132',
-                            borderTopColor: '#B22132',
-                            height: 76,
-                            paddingTop: 10,
-                            paddingLeft: 10,
-                            paddingRight: 10,
+                            backgroundColor: styleConstants.color_enhance,
+                            borderTopColor: styleConstants.color_enhance,
+                            paddingVertical: 0,
+                            height: '10%',
                         },
                         null,
                     ],
                     headerStyle: [
                         {
-                            backgroundColor: '#000223',
+                            backgroundColor: styleConstants.color_general,
                             shadowColor: 'transparent',
-                            height: 109,
+                            height: 100,
                         },
                         null,
                     ],
                     headerTitleStyle: [
                         {
-                            color: 'white',
+                            color: styleConstants.color_details,
                             fontSize: 28,
                             fontFamily: 'RobotoSlab-bold',
+                            paddingVertical: 10,
                         },
                         null,
                     ],
@@ -76,7 +86,6 @@ function Navigation() {
                     }}
                     component={MenuNavigation}
                 />
-                <Tab.Screen name="PROFIL" component={ProfileScreen} />
             </Tab.Navigator>
         </NavigationContainer>
     );
