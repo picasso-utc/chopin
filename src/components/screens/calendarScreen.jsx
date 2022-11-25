@@ -24,16 +24,17 @@ function CalendarScreen() {
     return (
         <View style={ScreenStyle.calendarScreenContainer}>
             <ScrollView contentContainerStyle={ScreenStyle.ScreenScrollContainer} scrollEnabled>
-                {Object.entries(calendar).map(([key, value], index) => (
-                    <DayCalendar
-                        key={key}
-                        id={index}
-                        today={key === today}
-                        weekday={week[new Date(key).getDay()]}
-                        day={new Date(key).getDate()}
-                        perms={value}
-                    />
-                ))}
+                {calendar &&
+                    Object.entries(calendar).map(([key, value], index) => (
+                        <DayCalendar
+                            key={key}
+                            id={index}
+                            today={key === today}
+                            weekday={week[new Date(key).getDay()]}
+                            day={new Date(key).getDate()}
+                            perms={value}
+                        />
+                    ))}
             </ScrollView>
         </View>
     );
