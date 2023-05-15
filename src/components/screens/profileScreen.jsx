@@ -23,9 +23,10 @@ function ProfileScreen() {
 
             if (result && result.type !== 'success') {
                 setConnected(false);
-                console.log(result);
             } else if (result) {
-                console.log(result);
+                const queryParameters = new URL(result.url);
+                const sessionid = queryParameters.searchParams.get("sessionid");
+                print(sessionid);
                 setConnected(true);
             }
         } catch (error) {
